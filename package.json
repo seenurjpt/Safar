@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "my-app",
+=======
   "name": "safar",
+>>>>>>> 10e083f6a7397f7e12adf4d5f56b690b5eaa0f9f
   "version": "0.1.0",
   "private": true,
   "dependencies": {
