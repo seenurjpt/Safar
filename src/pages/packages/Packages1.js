@@ -44,7 +44,7 @@ const Packages = () =>{
             <div className="pack_imag">
               <a href="" data-bs-target="#dev" data-bs-toggle="modal"><img className="imag"
             src={devprayag} alt=""/></a>
-              <div className="modal fade" id="dev" tabindex="-1">
+              <div className="modal fade" id="dev" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -82,7 +82,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#badri" data-bs-toggle="modal"><img className="imag"
                 src={badrinath} alt=""/></a>
-              <div className="modal fade" id="badri" tabindex="-1">
+              <div className="modal fade" id="badri" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -120,7 +120,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#keda" data-bs-toggle="modal"><img className="imag"
                 src={kedarkanth} alt=""/></a>
-              <div className="modal fade" id="keda" tabindex="-1">
+              <div className="modal fade" id="keda" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -165,7 +165,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#tung" data-bs-toggle="modal"><img className="imag"
                 src={tungnath} alt=""/></a>
-              <div className="modal fade" id="tung" tabindex="-1">
+              <div className="modal fade" id="tung" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -214,7 +214,7 @@ const Packages = () =>{
             <div className="pack_imag">
               <a href="" data-bs-target="#nal" data-bs-toggle="modal"><img className="imag"
                 src={nalsarover} alt=""/></a>
-              <div className="modal fade" id="nal" tabindex="-1">
+              <div className="modal fade" id="nal" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -253,7 +253,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#hari" data-bs-toggle="modal"><img className="imag"
                 src={harihar} alt=""/></a>
-              <div className="modal fade" id="hari" tabindex="-1">
+              <div className="modal fade" id="hari" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -294,7 +294,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#bahu" data-bs-toggle="modal"><img className="imag"
                 src={bahubali} alt=""/></a>
-              <div className="modal fade" id="bahu" tabindex="-1">
+              <div className="modal fade" id="bahu" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -332,7 +332,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#kumb" data-bs-toggle="modal"><img className="imag"
                 src={kumbhalgarh} alt=""/></a>
-              <div className="modal fade" id="kumb" tabindex="-1">
+              <div className="modal fade" id="kumb" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -381,7 +381,7 @@ const Packages = () =>{
             <div className="pack_imag">
               <a href="" data-bs-target="#jat" data-bs-toggle="modal"><img className="imag"
                 src={jatayu} alt=""/></a>
-              <div className="modal fade" id="jat" tabindex="-1">
+              <div className="modal fade" id="jat" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -422,7 +422,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#rame" data-bs-toggle="modal"><img className="imag"
                 src={rameshwaram} alt=""/></a>
-              <div className="modal fade" id="rame" tabindex="-1">
+              <div className="modal fade" id="rame" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -465,7 +465,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#tiru" data-bs-toggle="modal"><img className="imag"
                 src={tirupati} alt=""/></a>
-              <div className="modal fade" id="tiru" tabindex="-1">
+              <div className="modal fade" id="tiru" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -506,7 +506,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#meena" data-bs-toggle="modal"><img className="imag"
                 src={meenakshi} alt=""/></a>
-              <div className="modal fade" id="meena" tabindex="-1">
+              <div className="modal fade" id="meena" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -557,7 +557,7 @@ const Packages = () =>{
             <div className="pack_imag">
               <a href="" data-bs-target="#dar" data-bs-toggle="modal"><img className="imag"
                 src={darjeeling} alt=""/></a>
-              <div className="modal fade" id="dar" tabindex="-1">
+              <div className="modal fade" id="dar" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -597,7 +597,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#kon" data-bs-toggle="modal"><img className="imag"
                 src={konark} alt=""/></a>
-              <div className="modal fade" id="kon" tabindex="-1">
+              <div className="modal fade" id="kon" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -636,7 +636,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#jag" data-bs-toggle="modal"><img className="imag"
                 src={jagannath} alt=""/></a>
-              <div className="modal fade" id="jag" tabindex="-1">
+              <div className="modal fade" id="jag" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -675,7 +675,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#chilika" data-bs-toggle="modal"><img className="imag"
                 src={chilika} alt=""/></a>
-              <div className="modal fade" id="chilika" tabindex="-1">
+              <div className="modal fade" id="chilika" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -724,7 +724,7 @@ const Packages = () =>{
             <div className="pack_imag">
               <a href="" data-bs-target="#gwal" data-bs-toggle="modal"><img className="imag"
                 src={gwalior} alt=""/></a>
-              <div className="modal fade" id="gwal" tabindex="-1">
+              <div className="modal fade" id="gwal" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -766,7 +766,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#kai" data-bs-toggle="modal"><img className="imag"
                 src={kailash} alt=""/></a>
-              <div className="modal fade" id="kai" tabindex="-1">
+              <div className="modal fade" id="kai" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -811,7 +811,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#gol" data-bs-toggle="modal"><img className="imag"
                 src={golden} alt=""/></a>
-              <div className="modal fade" id="gol" tabindex="-1">
+              <div className="modal fade" id="gol" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
@@ -854,7 +854,7 @@ const Packages = () =>{
               </div>
               <a href="" data-bs-target="#lal" data-bs-toggle="modal"><img className="imag"
                 src={lal} alt=""/></a>
-              <div className="modal fade" id="lal" tabindex="-1">
+              <div className="modal fade" id="lal" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
