@@ -1,10 +1,16 @@
 
-import './App.css';
-import Packages from './pages/packages/Packages1';
+import './global.css';
+import Footer from './components/common/footer/Footer';
+import Header from './components/common/header/Header';
+import Home from './pages/home/Home';
 
 function App() {
   return (
-    <Packages/>
+    <>
+    <Header/>
+    <Home/>
+    <Footer/>
+    </>
   );
 }
 
