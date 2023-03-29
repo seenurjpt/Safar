@@ -5,19 +5,19 @@ const Footer = () => {
   return (
     <div>
        <footer>
-        <div class="footer-x">
+        <div className="footer-x">
 
-            <div class="logo-1 d-flex ">
+            <div className="logo-1 d-flex ">
                 <div>
-                    <p class="sa fw-medium">स</p>
+                    <p className="sa fw-medium">स</p>
                 </div>
                 <div>
-                    <p class="far fw-bolder">FAR</p>
+                    <p className="far fw-bolder">FAR</p>
                 </div>
             </div>
 
-            <div class="foot-nav">
-                <ul class="d-flex gap-3 list-unstyled">
+            <div className="foot-nav">
+                <ul className="d-flex gap-3 list-unstyled">
                     <li><a href="">Home</a></li>
                     <li><a href="">Destinations</a></li>
                     <li><a href="">Places</a></li>
@@ -27,13 +27,13 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <div class="socio">
-                <a href="" class="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="" class="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="" class="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-instagram"></ion-icon></a>
+            <div className="socio">
+                <a href="" className="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="" className="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="" className="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-instagram"></ion-icon></a>
             </div>
 
-            <div class="copyright">
+            <div className="copyright">
                 <p>Copyright @ 2023 All Rights Reserved</p>
             </div>
         </div>
