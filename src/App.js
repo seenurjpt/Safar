@@ -1,10 +1,9 @@
-
 import './App.css';
-import Packages from './pages/packages/Packages1';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
-    <Packages/>
+   <Gallery/>
   );
 }
 
