@@ -6,22 +6,22 @@ const Header = () => {
     <>
 
       <header>
-        <div class="navbar">
+        <div className="navbar">
 
-            <div class="container">
+            <div className="container">
 
-                <div class="logo-1 d-flex ">
+                <div className="logo-1 d-flex ">
                     <div>
-                        <p class="sa fw-medium">स</p>
+                        <p className="sa fw-medium">स</p>
                     </div>
                     <div>
-                        <p class="far fw-bolder">FAR</p>
+                        <p className="far fw-bolder">FAR</p>
                     </div>
                 </div>
 
-                <div class="navlinks">
+                <div className="navlinks kobra">
                     <ul>
-                        <li><a href="./index.html" class="active-nav">Home</a></li>
+                        <li><a href="./index.html" className="active-nav">Home</a></li>
                         <li><a href="./Destinations.html">Destinations</a></li>
                         <li><a href="./gallery.html">Places</a></li>
                         <li><a href="./Packages.html">Packages</a></li>

@@ -52,9 +52,9 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
-.active-nav:hover{
+/* .active-nav:hover{
     
-}
+} */
 
 /* Footer  */
 .footer-x{
@@ -98,11 +98,16 @@
         overflow: hidden;
     }
     .navbar{
-        height: 7rem;
+        height: 9.3rem;
     }
-    .offcanvas-header{
-        height: 7rem;
-      }
+    .kobra{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 9978603824 */
+        /* 8140063824 */
+        width: 10px;
+    }
       .sa{
         font-size: 3.5rem;
         color: var(--primary-color);
