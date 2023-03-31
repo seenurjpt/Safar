@@ -35,7 +35,7 @@ const Packages = () =>{
           <p className="about-banner-text">Find Your Trip</p>
         </div>
       </div>
-    </div><div>
+    </div><div className="wholee">
         <div className="boss">
           <div className="rol">
             <article className="tx">
@@ -43,7 +43,7 @@ const Packages = () =>{
             </article>
             <div className="pack_imag">
               <a href="" data-bs-target="#dev" data-bs-toggle="modal"><img className="imag"
-            src={devprayag} alt=""/></a>
+              src={devprayag} alt=""/></a>
               <div className="modal fade" id="dev" tabIndex="-1">
                 <div className="modal-dialog">
                   <div className="modal-content">
