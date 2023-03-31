@@ -74,7 +74,10 @@
     background-color: var(--bg-color);
     padding-bottom: 30px;
 }
-
+.booking_link{
+    text-decoration: none;
+    color: var(--white);
+} 
 @media (max-width:1680px) {
 
     .imag {
