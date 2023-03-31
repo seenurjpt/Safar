@@ -34,7 +34,7 @@ body {
 }
 .txxt{
     position: relative;
-    font-size: 20rem;
+    font-size: 16rem;
     font-weight: 1000;
     opacity: 0.2;
     color: aquamarine;
@@ -100,7 +100,7 @@ body {
     }
    .content{
     margin-top: 0%;
-    margin-bottom: 3rem;
+    margin-bottom: rem;
    }
   }
 
