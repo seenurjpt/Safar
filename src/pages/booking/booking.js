@@ -10,114 +10,138 @@ const Booking = () => {
         setVal(e.target.value)
     }
 return (
-    <div className="boody">
-        <div className="b">
-        <div className="b2">
-            <div className="b3">
-            <img className="imagg" src={background} alt="" />
-            </div>
-            <div className="fom">
-            {console.log("inreturn",val)}
-            <form action="#">
-                <label for="name">Traveler name*:</label>
-                <br />
-                <input onChange={handleChange}
-                required
-                className="txx"
-                type="text"
-                id="name"
-                name="name"
-                value={val}
-                />
-                <br />
-                <br />
-                <label for="phone">Phone number*:</label>
-                <br />
-                <input
-                required
-                className="txx"
-                type="tel"
-                id="phone"
-                name="phone"
-                />
-                <br />
-                <br />
-                <label for="Email">Email*:</label>
-                <br />
-                <input
-                required
-                className="txx"
-                type="email"
-                id="email"
-                name="Email"
-                />
-                <br />
-                <br />
-                <h1 className="hea">Packages</h1>
-                <br />
-                <label for="package">Choose a package:</label>
-                <br />
-                <select className="txxxt" id="package" name="package">
-                <option value="#" selected>
-                    --None--
-                </option>
-                <option value="#">Devprayag</option>
-                <option value="#">Badrinath</option>
-                <option value="#">Kedarnath</option>
-                <option value="#">Tungnath</option>
-                <option value="#">Nalsarovar</option>
-                <option value="#">Harihar Fort</option>
-                <option value="#">Bahubali Hills</option>
-                <option value="#">Kumbhalgarh</option>
-                <option value="#">Jatayu Museum</option>
-                <option value="#">Rameshwaram</option>
-                <option value="#">Tirupati</option>
-                <option value="#">Meenakshi</option>
-                <option value="#">Darjeeling</option>
-                <option value="#">Konark Sun Temple</option>
-                <option value="#">Jagannath Puri</option>
-                <option value="#">Chilika Lake</option>
-                <option value="#">Gwalior Fort</option>
-                <option value="#">Kailash Temple</option>
-                <option value="#">Golden Temple</option>
-                <option value="#">Lal Chowk</option>
-                </select>
-                <br />
-                <br />
-                <label for="date">Date of Travelling:</label>
-                <br />
-                <input className="txx" type="date" id="birthday" name="date" />
-                <br />
-                <br />
-                <label for="quantity">Adults:</label>
-                <input
-                className="txx"
-                type="number"
-                id="quantity"
-                name="quantity"
-                placeholder="00"
-                min="1"
-                max="10"
-                />
-                <label for="quantity">Kids:</label>
-                <input
-                className="txx"
-                type="number"
-                id="quantity"
-                name="quantity"
-                placeholder="00"
-                min="1"
-                max="10"
-                />
-                <br />
-                <br />
-                <input className="submit" type="submit" value="Submit" />
-                <input className="reset" type="reset" value="Reset" />
-            </form>
+    <form>
+    <div className="card shadow mt-4 bg-white rounded">
+
+            <div className="card-body">
+
+                <p className="card-title text-center shadow mt-5 rounded">Travel Booking Form</p>
+
+                <div className="icons text-center">
+
+                    <i className="fa fa-bus fa-2x" aria-hidden="true"></i>
+                    <i className="fa fa-campground fa-2x" aria-hidden="true"></i>
+                    <i className="fa fa-utensils fa-2x" aria-hidden="true"></i>
+                    <i className="fa fa-person-hiking fa-2x" aria-hidden="true"></i>
+
+
+                </div>
+
+                <hr/>
+
+                <div className="row mt-4">
+
+                    <div className="col-sm-6">
+                    <input placeholder="Name" type="text" id="date-picker-example"
+                            className="form-control mb-4" style={{fontfamily:'Arial,FontAwesome'}}/>
+                    </div>
+
+                    <div className="col-sm-6">
+                        <input placeholder="E-mail" type="text" id="date-picker-example"
+                            className="form-control" style={{fontfamily:'Arial,FontAwesome'}}/>
+                    </div>
+
+
+                </div>
+                
+
+                <div className="row mt-4">
+
+                    <div className="col-sm-6">
+                        <input placeholder="Phone number" type="" id="date-picker-example"
+                            className="form-control mb-4" style={{fontfamily:'Arial,FontAwesome'}}/>
+                    </div>
+
+                    <div className="col-sm-6">
+                        <input placeholder="&#xf073; Arriving" type="date" id="date-picker-example"
+                            className="form-control datepicker" style={{fontfamily:'Arial,FontAwesome'}}/>
+                    </div>
+
+                </div>
+
+
+
+                <div className="row mt-4">
+
+                    <div className="col-sm-6">
+                        <select className="browser-default custom-select mb-4" id="select">
+                        <option value="#" disabled="" selected="">--Packages--</option>
+                            <option value="#">Devprayag</option>
+                            <option value="#">Badrinath</option>
+                            <option value="#">Kedarnath</option>
+                            <option value="#">Tungnath</option>
+                            <option value="#">Nalsarovar</option>
+                            <option value="#">Harihar Fort</option>
+                            <option value="#">Bahubali Hills</option>
+                            <option value="#">Kumbhalgarh</option>
+                            <option value="#">Jatayu Museum</option>
+                            <option value="#">Rameshwaram</option>
+                            <option value="#">Tirupati</option>
+                            <option value="#">Meenakshi</option>
+                            <option value="#">Darjeeling</option>
+                            <option value="#">Konark Sun Temple</option>
+                            <option value="#">Jagannath Puri</option>
+                            <option value="#">Chilika Lake</option>
+                            <option value="#">Gwalior Fort</option>
+                            <option value="#">Kailash Temple</option>
+                            <option value="#">Golden Temple</option>
+                            <option value="#">Lal Chowk</option>
+                        </select>
+                    </div>
+
+                    <div className="col-sm-6">
+                        <select className="browser-default custom-select mb-4" id="select">
+                            <option value="" disabled="" selected="">Modes</option>
+                            <option value="1">Flight</option>
+                            <option value="2">Train</option>
+                            <option value="3">Bus</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+
+
+                <div className="row mt-4">
+
+                    <div className="col-sm-4">
+                        <select className="browser-default custom-select mb-4" id="select">
+                            <option value="" disabled="" selected="">Kids(0-14)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <div className="col-sm-4">
+                        <select className="browser-default custom-select mb-4" id="select">
+                            <option value="" disabled="" selected="">Adults(15-64)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <div className="col-sm-4">
+                        <select className="browser-default custom-select mb-4" id="select">
+                            <option value="" disabled="" selected="">Seniors(65+)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+
+                <input className="btn float-left " type="reset"/>
+                <input className="btn float-right" type="submit" value="Book"/>
             </div>
         </div>
-        </div>
-    </div>
+        </form>
+
     );
 };
 
