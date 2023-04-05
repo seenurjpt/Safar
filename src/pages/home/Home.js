@@ -1,9 +1,14 @@
 import React from "react";
+import "./Home.css"
+import binoculars from "../../assets/binoculars.png"
+import map_marker from "../../assets/map-marker.png"
+import tickets from "../../assets/tickets.png"
 
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
+    {console.log(props)}
       <div className="intro">
         <div className="intro-header">
           <div>
@@ -18,8 +23,8 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="card-1">
-              <div className="card-hero px-5 rounded-5">
+            {/* <div className="card-1">
+              <div className="card-hero  rounded-5">
                 <div className="loc d-flex ">
                   <ion-icon
                     name="location-outline"
@@ -55,15 +60,15 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
-      <div id="services">
+      <div id="services" >
         <div className="services container">
           <div className="bino">
-            {/* <img src="./Assets/binoculars.png" alt=""> */}
+            <img src={binoculars}/>
             <p className="fw-bold">Search Your Destination</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta a
@@ -73,7 +78,7 @@ const Home = () => {
           </div>
 
           <div className="tick">
-            {/* <img src="./Assets/tickets.png" alt=""> */}
+            <img src={tickets}/>
             <p className="fw-bold">Get Your Tickets</p>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -84,7 +89,7 @@ const Home = () => {
           </div>
 
           <div className="map-loc">
-            {/* <img src="./Assets/map-marker.png" alt=""> */}
+            <img src= {map_marker}/>
             <p className="fw-bold">Travel Around The Country</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero at
