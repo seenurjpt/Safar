@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BrowserRouter, Route,Routes} from 'react-router-dom';
+import { BrowserRouter, Route,Routes, Navigate} from 'react-router-dom';
 import './global.css';
 import Header from './components/common/header/Header';
 import Footer from './components/common/footer/Footer';
@@ -34,7 +34,7 @@ const [data, setData] = useState()
     <Header/>
     <Routes>
         <Route path="home" element={<Home  data={data} />} />
-        <Route exact path="/" element={<Home />} />
+        <Route path="" element={<Navigate to="/home" />}/>
         <Route path="/login" element={<Login />} />
         <Route path="destinations" element={<Destinations />} />
         <Route path="places" element={<Places/>} />

@@ -9,7 +9,7 @@
   }
   
   .contact-banner img{
-    height: 45vh; 
+    height: 40vh; 
     width: 100%;
     position: absolute;
 }
@@ -245,7 +245,7 @@
      
     }
   
-    .card1 h1,
+    .card1 h1
     p {
       color: #ffff;
     }
@@ -416,7 +416,7 @@
      
     }
   
-    .card1 h1,
+    .card1 h1
     p {
       color: #ffff;
       font-size: 10px;

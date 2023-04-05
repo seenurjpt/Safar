@@ -48,10 +48,10 @@ body {
     margin: 0 auto;
 
 }
-@media (max-width: 1560px) {
+/* @media (max-width: 1560px) {
     .text{
         position: absolute;
-       font-size: 1rem;
+       font-size: 5rem;
        font-weight: 400;
        color: whitesmoke;
        text-transform: capitalize;
@@ -66,19 +66,19 @@ body {
         text-transform: uppercase;
     }
     .banner img{
-        height: 4vh;
+        height: 40vh;
         width: 100%;
        
         filter: brightness(50%);
         position: absolute;
     }
    
-  }
+  } */
 
   @media (max-width: 800px) {
     .text{
         position: absolute;
-       font-size: 2.1rem;
+       font-size: 1.2rem;
        font-weight: 400;
        color: whitesmoke;
        text-transform: capitalize;
@@ -86,7 +86,7 @@ body {
     }
     .txxt{
         position: relative;
-        font-size: 6.8rem;
+        font-size: 4.5rem;
         font-weight: 1000;
         opacity: 0.2;
         color: aquamarine;
