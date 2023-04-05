@@ -6,7 +6,7 @@ const Contact = () => {
   return (
 
   <>
-         <div class="about-banner">
+         <div class="contact-banner">
             <img src= {bannerco} />
         </div>
 

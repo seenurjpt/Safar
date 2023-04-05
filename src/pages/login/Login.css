@@ -12,11 +12,11 @@
 	background-image: url('../../assets//backwallpaper.jpg');
 	background-size: cover;
   }
-a {
+  .form77 a {
 	cursor: pointer;
   transition: all 200ms linear;
 }
-a:hover {
+.form77 a:hover {
 	text-decoration: none;
 }
 .link {
@@ -25,22 +25,22 @@ a:hover {
 .link:hover {
   color: var(--bg-color);
 }
-p {
+.form77 p {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
 }
-h4 {
+.form77 h4 {
   font-weight: 600;
   color: var(--primary-shades);
 }
-h6 span{
+.form77 h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--primary-shades);
 }
-.section{
+.form77  .section{
   position: relative;
   width: 100%;
   display: block;
@@ -53,8 +53,8 @@ h6 span{
   position: absolute;
   left: -9999px;
 }
-.checkbox:checked + label,
-.checkbox:not(:checked) + label{
+.form77  .checkbox:checked + label,
+.form77 .checkbox:not(:checked) + label{
   position: relative;
   display: block;
   text-align: center;
@@ -66,8 +66,8 @@ h6 span{
   cursor: pointer;
   background-color: var(--helper-color);
 }
-.checkbox:checked + label:before,
-.checkbox:not(:checked) + label:before{
+.form77 .checkbox:checked + label:before,
+.form77 .checkbox:not(:checked) + label:before{
   position: absolute;
   display: block;
   width: 36px;
@@ -85,7 +85,7 @@ h6 span{
   font-size: 24px;
   transition: all 0.5s ease;
 }
-.checkbox:checked + label:before {
+.form77 .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
 }
 
@@ -133,7 +133,7 @@ backdrop-filter: blur(5px);
 .card-back {
   transform: rotateY(180deg);
 }
-.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+.form77  .checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
   transform: rotateY(180deg);
 }
 .center-wrap{
@@ -178,7 +178,7 @@ backdrop-filter: blur(5px);
   outline: none;
   box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
 }
-.input-icon {
+.form77  .input-icon {
   position: absolute;
   top: 0;
   left: 18px;
@@ -236,7 +236,7 @@ backdrop-filter: blur(5px);
     transition: all 200ms linear;
 }
 
-.btn{  
+.form77  .btn{  
   border-radius: 4px;
   height: 44px;
   font-size: 13px;
@@ -264,31 +264,15 @@ backdrop-filter: blur(5px);
   color: var(--bg-color);
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
-.btn:active,
-.btn:focus{  
+.form77 .btn:active,
+.form77 .btn:focus{  
   background-color: var(--helper-color);
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
-.btn:hover{  
+.form77 .btn:hover{  
   background-color: var(--helper-color);
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
-
-
-
-/* .logo {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	display: block;
-	z-index: 100;
-	transition: all 250ms linear;
-}
-.logo img {
-	height: 26px;
-	width: auto;
-	display: block;
-} */
