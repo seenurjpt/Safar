@@ -47,13 +47,13 @@ const Footer = () => {
           </div>
 
           <div className="socio">
-            <a href="" className="px-3 fs-4 text-decoration-none text">
+            <a href="" className="px-3 fs-4 text-decoration-none ">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
-            <a href="" className="px-3 fs-4 text-decoration-none text">
+            <a href="" className="px-3 fs-4 text-decoration-none ">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
-            <a href="" className="px-3 fs-4 text-decoration-none text">
+            <a href="" className="px-3 fs-4 text-decoration-none ">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </div>
