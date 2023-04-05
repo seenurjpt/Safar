@@ -10,6 +10,7 @@ import Places from './pages/places/Places'
 import Packages from './pages/packages/Packages1';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
+import Booking from './pages/booking/booking';
 import Login from './pages/login/Login';
 
 function App() {
@@ -41,6 +42,7 @@ const [data, setData] = useState()
         <Route path="packages" element={<Packages />} />
         <Route path="about" element={<About/>} />
         <Route path="contact" element={<Contact />} /> 
+        <Route path="booking" element={<Booking/>}/>
     </Routes>
 
     <Footer/>
