@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css"
 import binoculars from "../../assets/binoculars.png"
 import map_marker from "../../assets/map-marker.png"
@@ -19,7 +20,9 @@ const Home = (props) => {
             <div className="explore ">
               <div className="explore-btn rounded-5">
                 <ion-icon name="earth" className="earth px-2"></ion-icon>
-                <a href="#">Explore</a>
+                <button type="button" className="btn ">
+                <Link to="/booking">Explore</Link>
+                </button>
               </div>
             </div>
 

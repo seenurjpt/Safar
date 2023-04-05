@@ -50,9 +50,14 @@ function Header() {
                   Contact Us
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink  to="/booking" activeClassName="active">
                   Book Here
+                </NavLink>
+              </li> */}
+              <li className="nav-item">
+                <NavLink  to="/login" ClassName="active-nav">
+                <i class="fa-solid fa-circle-user"></i>
                 </NavLink>
               </li>
             </ul>
