@@ -1,0 +1,499 @@
+
+:root {
+    --primary-color: #000f71;
+    --primary-shades: #00020b;
+    --para-color: #80849c;
+    --helper-color: #0327c6;
+    --white: #fff;
+    --bg-color: #e6e6eb;
+  }
+  
+  .contact-banner img{
+    height: 45vh; 
+    width: 100%;
+    position: absolute;
+}
+.abcd{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-fade{
+  position: relative;
+  font-size: 12rem;
+  font-weight: 1000;
+  opacity: 0.3;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 40px;
+  /* z-index: 1; */
+}
+.contact-banner-text{
+  /* position: relative; */
+  position: absolute;
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--white);
+  text-transform:capitalize;
+  letter-spacing: 10px;
+  z-index: 2;
+}
+  .ola {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a8acac;
+    /* min-width: 100%; */
+  }
+  
+  .card1 {
+    height: 28rem;
+    width: 20rem;
+    background-color: rgb(3, 39, 198, 0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .card1 h1 {
+    padding-bottom: 3rem;
+  
+  }
+  
+  .card1 h1 p {
+    color: var(--bg-color);
+  }
+  
+  .card2 {
+    height: 35rem;
+    width: 60rem;
+    background-color: rgba(0, 34, 255, 0.126);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+  
+  .form55 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .info11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .info11 ion-icon {
+    color: var(--helper-color);
+  }
+  
+  .card2 h1 {
+   
+    padding-bottom: 3.5rem;
+    color: var(--primary-color);
+  }
+  
+  .effect {
+    border: 0;
+    height: 1.2rem;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--para-color);
+    background-color: rgb(0, 0, 0, 0);
+  }
+  
+  label {
+    font-size: 20px;
+  }
+  
+  :focus {
+    outline: none;
+  }
+  
+  
+  /* necessary to give position: relative to parent. */
+  input[type="text"] {
+    font: 15px/24px ;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+  }
+  
+  .effect {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #251d6d;
+  }
+  
+  .effect~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50;
+    transition: 0.4s;
+  }
+  
+  .effect:focus~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+  }
+  
+  
+  .mk {
+    padding-top: 50px;
+  
+  }
+  
+  .mk ion-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    /* margin-right:5px; */
+  }
+  
+  .mk ion-icon:hover {
+    color: var(--bg-color);
+  }
+  
+  .sub button {
+    height: 2rem;
+    width: 5rem;
+    padding: 3px;
+    background-color: var(--primary-color);
+    border-radius: 7px;
+  
+  }
+  .sub button:hover{
+    transform: scale(1.2);
+    transition: all 200ms ease-in-out;
+    background-color: var(--helper-color);
+  }
+  
+  @media (max-width:800) {
+    .contact-banner img{
+      height: 45vh; 
+      width: 100%;
+      position: absolute;
+  }
+  .abcd{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-fade{
+    position: relative;
+    font-size: 12rem;
+    font-weight: 1000;
+    opacity: 0.3;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 40px;
+    /* z-index: 1; */
+  }
+  .contact-banner-text{
+    /* position: relative; */
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--white);
+    text-transform:capitalize;
+    letter-spacing: 10px;
+    z-index: 2;
+  }
+    
+    .ola {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      min-width: 100%;
+    }
+  
+    .card1 {
+      height: 28rem;
+      width: 20rem;
+      background-color: rgb(3, 39, 198, 0.4);
+      border-radius: 10px;
+      backdrop-filter: blur(15px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+  
+    .card1 h1 {
+      padding-bottom: 3rem;
+     
+    }
+  
+    .card1 h1,
+    p {
+      color: #ffff;
+    }
+  
+    .card2 {
+      height: 35rem;
+      width: 10rem;
+      background-color: rgb(120, 135, 164, 0.4);
+      backdrop-filter: blur(15px);
+      display: flex;
+      border-radius: 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+    }
+  
+    .form55 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgb(11, 11, 123);
+    }
+  
+    .form55 .a {
+      display: flex;
+      justify-content: center;
+    }
+  
+    ul {
+      list-style: none;
+    }
+  
+    .info11 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  
+    .info11 ion-icon {
+      color: rgba(58, 61, 165, 0.8);
+    }
+  
+    .card2 h1 {
+     
+      padding-bottom: 3.5rem;
+      color: rgb(11, 11, 123);
+    }
+  
+  
+    input {
+      border: 2px solid rgb(149, 118, 118);
+    }
+  
+    b1 {
+      border: 2px solid black;
+      border-radius: 40%;
+    }
+  
+    .w-50 {
+      width: 100%;
+    }
+  
+    .w-100 {
+      width: 100%;
+    }
+  
+    .effect {
+      border: 0;
+      padding: 7px 0;
+      border-bottom: 1px solid #2f1465;
+      background-color: rgb(120, 135, 164, 0);
+    }
+  
+    label {
+      font-size: 20px;
+    }
+  
+    :focus {
+      outline: none;
+    }
+  
+    .col-3 {
+      float: left;
+      width: 27.33%;
+      margin: 40px 3%;
+      position: relative;
+    }
+  
+    /* necessary to give position: relative to parent. */
+    input[type="text"] {
+      font: 15px/24px "Lato", Arial, sans-serif;
+      color: #333;
+      width: 100%;
+      box-sizing: border-box;
+      letter-spacing: 1px;
+    }
+  
+    .effect,
+    .effect-2,
+    .effect-3 {
+      border: 0;
+      padding: 7px 0;
+      border-bottom: 1px solid #251d6d;
+    }
+  
+    .effect~.focus-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4caf50;
+      transition: 0.4s;
+    }
+  
+    .effect:focus~.focus-border {
+      width: 100%;
+      transition: 0.4s;
+    }
+  
+  
+    .mk {
+      padding-top: 50px;
+  
+    }
+  
+    .mk ion-icon {
+      font-size: 1.5rem;
+      color: rgba(58, 61, 165, 0.8);
+    }
+  
+    .mk ion-icon:hover {
+      color: #193bc0;
+    }
+  
+  }
+  
+  @media (max-width: 600px) {
+    .ola {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+  
+    .card1 {
+      height: 15rem;
+      width: 8rem;
+      background-color: rgb(3, 39, 198, 0.4);
+      border-radius: 10px;
+      backdrop-filter: blur(15px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      font-size: 2px;
+  
+    }
+  
+    .card1 h1 {
+      padding-bottom: 0;
+      padding-top: 2rem;
+     
+    }
+  
+    .card1 h1,
+    p {
+      color: #ffff;
+      font-size: 10px;
+    }
+  
+    .card2 {
+      height: 20rem;
+      width: 17rem;
+      background-color: rgb(120, 135, 164, 0.4);
+      border-radius: 10px;
+      backdrop-filter: blur(15px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+      font-size: 0.5rem;
+    }
+  
+    .mk{
+      padding-top: 0px;
+      /* padding-bottom: 1rem; */
+    }
+  
+    .mk ion-icon {
+      font-size: 0.7rem;
+      color: rgba(58, 61, 165, 0.8);
+      /* padding-top: 80px; */
+      margin-top: 5px;
+  
+    }
+  
+    .form55 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 90px;
+      color: rgb(11, 11, 79);
+      margin-left: 88px;
+      font-size: 0.3rem;
+      height: 12rem;
+      width: 8rem
+    }
+  
+    label {
+      font-size: 10px;
+    }
+  
+    .card2 h1 {
+     
+      padding-bottom: 2rem;
+      color: rgb(11, 11, 123);
+      margin-left: 66px;
+      font-size: 1rem;
+      padding-top: 4rem;
+    }
+  
+    .info11 {
+      font-size: 5px;
+      margin-top: 20px;
+  
+    }
+  
+    .effect {
+      border: 0;
+      height: 5px;
+      padding: 7px 0;
+      border-bottom: 1px solid #2f1465;
+      background-color: rgb(120, 135, 164, 0);
+    }
+  
+    .sub button {
+      height: 1.5rem;
+      width: 3rem;
+      background-color: #193bc0;
+      border-radius: 7px;
+    }
+  
+  }
