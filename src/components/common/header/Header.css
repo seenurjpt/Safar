@@ -47,7 +47,7 @@
     color: var(--helper-color);
 }
 
-.active{
+.active-nav{
     background-color: #3179ff;
     padding: 5px 10px;
     border-radius: 5px;
