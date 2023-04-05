@@ -26,15 +26,16 @@ body {
 }
 .text{
     position: absolute;
-   font-size: 4rem;
+   font-size: 5rem;
    font-weight: 400;
    color: whitesmoke;
    text-transform: capitalize;
    z-index: 2;
 }
+
 .txxt{
     position: relative;
-    font-size: 16rem;
+    font-size: 18rem;
     font-weight: 1000;
     opacity: 0.2;
     color: aquamarine;

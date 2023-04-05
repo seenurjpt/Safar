@@ -11,7 +11,7 @@ const Contact = () => {
         </div>
 
         <div class="abc">
-            <p class="contact-fade">Contact</p>
+            <p class="about-fade">Contact</p>
             <p class="about-banner-text">Connect With Us</p>
         </div>
 

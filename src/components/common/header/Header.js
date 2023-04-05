@@ -1,12 +1,11 @@
 import React from 'react'
 import '../header/Header.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
     <>
 
-      <header>
         <div className="navbar">
 
             <div className="container">
@@ -22,20 +21,18 @@ const Header = () => {
 
                 <div className="navlinks kobra">
                     <ul>
-                        <li><Link to="/home" >Home</Link></li>
-                        <li><Link to="/destinations">Destinations</Link></li>
-                        <li><Link to="/places">Places</Link></li>
-                        <li><Link to="/packages">Packages</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                        <li><NavLink activeClassName="active" to="/home" >Home</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/destinations">Destinations</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/places">Places</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/packages">Packages</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
                 
             </div>
         </div>
-    </header>
-
-    </>
+            </>
   )
 }
 
