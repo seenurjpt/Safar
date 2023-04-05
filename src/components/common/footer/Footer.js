@@ -1,45 +1,70 @@
-import React from 'react'
-import '../header/Header.css'
+import React from "react";
+import "../footer/Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div>
-       <footer>
+      <footer>
         <div className="footer-x">
+          <div className="logo-1 d-flex ">
+            <div>
+              <p className="sa fw-medium">स</p>
+            </div>
+            <div>
+              <p className="far fw-bolder">FAR</p>
+            </div>
+          </div>
 
-            <div className="logo-1 d-flex ">
-                <div>
-                    <p className="sa fw-medium">स</p>
+          <div className="foot-nav">
+            <ul className="d-flex gap-1 gap-sm-3  list-unstyled">
+              <div className="foot-links">
+                <div className="foot-links1">
+                  {" "}
+                  <li>
+                    <Link to="/home">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/destinations">Destinations</Link>
+                  </li>
+                  <li>
+                    <Link to="/places">Places</Link>
+                  </li>
                 </div>
-                <div>
-                    <p className="far fw-bolder">FAR</p>
+                <div className="foot-links1">
+                  <li>
+                    <Link to="packages">Packages</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
                 </div>
-            </div>
+              </div>
+            </ul>
+          </div>
 
-            <div className="foot-nav">
-                <ul className="d-flex gap-3 list-unstyled">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Destinations</a></li>
-                    <li><a href="">Places</a></li>
-                    <li><a href="">Packages</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
+          <div className="socio">
+            <a href="" className="px-3 fs-4 text-decoration-none ">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a href="" className="px-3 fs-4 text-decoration-none ">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="" className="px-3 fs-4 text-decoration-none ">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </div>
 
-            <div className="socio">
-                <a href="" className="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="" className="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="" className="px-3 fs-4 text-decoration-none text"><ion-icon name="logo-instagram"></ion-icon></a>
-            </div>
-
-            <div className="copyright">
-                <p>Copyright @ 2023 All Rights Reserved</p>
-            </div>
+          <div className="copyright">
+            <p>Copyright @ 2023 All Rights Reserved 💙</p>
+          </div>
         </div>
-    </footer>
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,57 +1,69 @@
-import React from 'react'
-import '../header/Header.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "../header/Header1.css";
 
-const Header = () => {
-    return (
+function Header() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  return (
     <>
-    <body>
-    <div class="wrapper">
-      <nav>
-        <a href="#" class="logo">LOGO</a>
-        <input type="checkbox" name="" id="toggle"/>
-        <label for="toggle"><i class="material-icons"><ion-icon name="menu-outline"></ion-icon></i></label>
-        <div class="menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
+      <nav className="navbar">
+        <div className="nav-container">
+          <div className="logo-1 d-flex ">
+            <div>
+              <p className="sa fw-medium">स</p>
+            </div>
+            <div>
+              <p className="far fw-bolder">FAR</p>
+            </div>
+          </div>
+          <div className="navlinks">
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <NavLink to="/home" ClassName="active" >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink  to="/destinations" activeClassName="active">
+                 Destinations
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/places" activeClassName="active">
+                  Places
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink  to="/packages" activeClassName="active">
+                  Packages
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink  to="/about" activeClassName="active">
+                  About
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink  to="/contact" activeClassName="active">
+                  Contact Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink  to="/booking" activeClassName="active">
+                  Book Here
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+          </div>
         </div>
       </nav>
-    </div>
-  </body>
-
-    {/* <header>
-        <div className="navbar">
-
-            <div className="contaner">
-                <div className="logo-1 d-flex ">
-                    <div>
-                        <p className="sa fw-medium">स</p>
-                    </div>
-                    <div>
-                        <p className="far fw-bolder">FAR</p>
-                    </div>
-                </div>
-                <div className="navlinks kobra">
-                    <ul>
-                        <li><Link to="/home" >Home</Link></li>
-                        <li><Link to="/destinations">Destinations</Link></li>
-                        <li><Link to="/places">Places</Link></li>
-                        <li><Link to="/packages">Packages</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-    </header> */}
-
     </>
-    )
+  );
 }
 
-export default Header
+export default Header;
