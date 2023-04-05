@@ -67,7 +67,7 @@
   
   }
   
-  .card1 h1, p {
+  .card1 h1 p {
     color: var(--bg-color);
   }
   
