@@ -11,7 +11,7 @@ const Booking = () => {
     }
 return (
     <form>
-    <div className="card shadow mt-4 bg-white rounded">
+    <div className="card shadow mt-4 mb-5 bg-white rounded">
 
             <div className="card-body">
 

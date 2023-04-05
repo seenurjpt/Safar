@@ -37,6 +37,7 @@ const [data, setData] = useState()
         <Route path="home" element={<Home  data={data} />} />
         <Route path="" element={<Navigate to="/home" />}/>
         <Route path="login" element={<Login />} />
+        <Route path="booking" element={<Booking />} />
         <Route path="destinations" element={<Destinations />} />
         <Route path="places" element={<Places/>} />
         <Route path="packages" element={<Packages />} />
