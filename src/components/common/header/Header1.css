@@ -120,7 +120,7 @@
       z-index: 1;
     }
     .nav-item .active {
-      color: #ffdd40;
+      color: var(--white);
       border: none;
     }
     .nav-links {
