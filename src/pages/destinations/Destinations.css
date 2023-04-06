@@ -52,7 +52,7 @@
     filter: brightness(50%);
     position: absolute;
 }
-.abc{
+.abc1{
     align-items: left;
 }
 .about-banner-text{
@@ -93,7 +93,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -139,7 +139,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -184,7 +184,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -229,7 +229,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -275,7 +275,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .about-banner-text{
