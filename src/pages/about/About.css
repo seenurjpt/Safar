@@ -18,7 +18,7 @@
   .about-bannerr img{
     height: 55vh; 
     min-width: 100%;
-    filter: brightness(90%);
+    filter: brightness(100%);
     position: absolute;
   }
   .aboutus11{
@@ -49,9 +49,9 @@
   }
   .about-fade{
     position: relative;
-    font-size: 14rem;
+    font-size: 12rem;
     font-weight: 1000;
-    opacity: 0.2;
+    opacity: 0.3;
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 40px;

@@ -9,7 +9,7 @@ const Contact = () => {
         <img src={bannerco} />
       </div>
 
-      <div class="abc">
+      <div class="abcd">
         <p class="contact-fade">Contact</p>
         <p class="contact-banner-text">Connect With Us</p>
       </div>
