@@ -1,57 +1,80 @@
+/* =====Color Palletes===== */
+
+:root {
+  --primary-color: #000f71;
+  --primary-shades: #00020b;
+  --para-color: #80849c;
+  --helper-color: #0327c6;
+  --white: #fff;
+  --bg-color: #e6e6eb;
+}
+
+
+/* =====Main Section Background===== */
 
 .intro {
-    height: 90vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url("../../assets/background-main2.jpg");
-    min-width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 99;
-  }
-  .intro-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../assets/background-main2.jpg");
+  min-width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
 
-  .saf-1 {
-    font-size: 5rem;  
-    color: var(--white);
-    margin-bottom: 0.6rem;
-    font-weight: 400;
-    display: block;
-    font-family: 'Sono', sans-serif;
-  }
-.explore{
-  /* padding-inline:  50rem; */
+.intro-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* =====Main Text===== */
+
+.saf-1 {
+  font-size: 5rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+  display: block;
+  font-family: 'Sono', sans-serif;
+}
+
+
+/* =====Explore Button===== */
+
+.explore {
   display: flex;
   justify-content: center;
   padding-bottom: 3rem;
 }
-.explore-btn{
+
+.explore-btn {
   display: flex;
   height: 3rem;
   justify-content: center;
   align-items: center;
-  background-color: rgb(18, 100, 250, 0.4);  
+  background-color: rgba(0, 89, 255, 0.521);
   backdrop-filter: blur(10px);
   width: fit-content;
   padding: 1rem;
 }
-.earth {
+
+.explore-btn ion-icon {
   height: 1.5rem;
   width: 1.5rem;
-  color: var(--bg-color);
+  color: var(--white);
+  padding-right: 10px;
 }
 
 .explore a:link,
-.explore a:visited{
+.explore a:visited {
   text-decoration: none;
   color: var(--bg-color);
   font-size: 1rem;
@@ -61,153 +84,110 @@
 }
 
 .explore a:hover,
-.explore a:visited{
+.explore a:visited {
   color: var(--color-dark);
 }
 
-.card-1{
-  /* padding: 0rem 25rem; */
-}
-.loc, .cyc, .dat, .gus{
-  align-items: center;
-  margin-top: 20px;
-}
-.card-hero{
+
+/* =====Services Section===== */
+
+.services {
+  height: 50vh;
   display: flex;
-  height: 6rem;
-  margin-top: 8px;
-  width: fit-content;
-  align-items: center;
   justify-content: center;
-  gap: 4rem;  
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(25px);
-}
-.card-hero p {
-  color: var(--primary-color)  ;
-  font-size: 0.8rem;
+  align-items: center;
+  gap: 5rem;
 }
 
-  .location, .cycle, .guests, .when {
-    height: 2rem;
-    width: 2rem;
+.services p {
+  text-align: justify;
+  padding: 0.5rem;
+  color: var(--primary-shades);
+}
+
+.services img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.bino, .tick, .map-loc {
+  height: 20rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =====Code For Responsiveness===== */
+
+@media(max-width: 600px) {
+
+  /* =====main section background ===== */
+
+  .intro {
+    height: 98vh;
+  }
+
+  /* =====main text===== */
+
+  .saf-1 {
+    font-size: 1.5rem;
+  }
+
+  /* =====explore button===== */
+
+  .explore {
+    padding-bottom: 3rem;
+  }
+
+  .explore-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(18, 100, 250, 0.4);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    padding: 1rem;
+  }
+
+  .earth {
+    height: 1.5rem;
+    width: 1.5rem;
     color: var(--bg-color);
   }
 
-  .services{
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-  /* #services{
-    background-image: url("../../assets/toys.png");
-    background-size: 900px;
-    background-attachment: fixed;
-  } */
-  .services p{
-    text-align: justify;
-    padding: 0.5rem;
-    color: var(--primary-shades);
-  }
-  .services img{
-    height: 4rem;
-    width: 4rem;
-  }
-  .bino, .tick, .map-loc{
-    height: 20rem;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: var(--white);
-    border-radius: 10px; */
+  .explore a:link,
+  .explore a:visited {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
   }
 
-  @media(max-width: 600px){
-    .intro{
-      height: 98vh;
-    }
-    .saf-1 {
-      font-size: 1.5rem;  
-    }
-    .explore{
-      /* padding-inline:  35em; */
-      padding-bottom: 3rem;
-    }
-    .explore-btn{
-      display: flex;
-      /* height: 9rem; */
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(18, 100, 250, 0.4);  
-      backdrop-filter: blur(10px);
-      width: fit-content;
-      padding: 1rem;
-    }
-    .earth {
-      height: 1.5rem;
-      width: 1.5rem;
-      color: var(--bg-color);
-    }
-    
-    .explore a:link,
-    .explore a:visited{
-      text-decoration: none;
-      color: var(--bg-color);
-      font-size: 1rem;
-      font-weight: 600;
-      font-family: 'Lobster', cursive;
-      letter-spacing: 2px;
-    }
-    
-    .explore a:hover,
-    .explore a:visited{
-      color: var(--color-dark);
-    }
-    
-    .card-1{
-      padding: 0rem 15rem;
-    }
-    .loc, .cyc, .dat, .gus{
-      align-items: center;
-      margin-top: 20px;
-    }
-    .card-hero{
-      display: flex;
-      height: 6rem;
-      margin-top: 8px;
-      width: fit-content;
-      align-items: center;
-      justify-content: center;
-      gap: 4rem;  
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(25px);
-    }
-    .card-hero p {
-      color: var(--primary-color)  ;
-      font-size: 0.8rem;
-    }
-    
-      .location, .cycle, .guests, .when {
-        height: 2rem;
-        width: 2rem;
-        color: var(--bg-color);
-      }
-    
-      .services{
-        display: flex;
-        flex-direction: column;
-        margin: 12rem 0;
-      }
-      .services img{
-        height: 3rem;
-        width: 3rem;
-      }
-      .bino, .tick, .map-loc{
-        height: 8rem;
-        margin-top: 1rem;
-      }
+  .explore a:hover,
+  .explore a:visited {
+    color: var(--color-dark);
+  }
+
+/* =====services section===== */
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    margin: 12rem 0;
+  }
+
+  .services img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .bino, .tick, .map-loc {
+    height: 8rem;
+    margin-top: 1rem;
+  }
 }
