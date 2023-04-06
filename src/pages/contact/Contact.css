@@ -19,7 +19,7 @@
 }
 
 .abcd {
-  height: 50vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@
   font-size: 12rem;
   font-weight: 1000;
   opacity: 0.3;
-  color: var(--primary-color);
+  color: #2e2e2e;
   text-transform: uppercase;
   letter-spacing: 40px;
 }
@@ -40,7 +40,6 @@
 .contact-banner-text {
   position: absolute;
   font-size: 4.5rem;
-  margin-top: 5rem;
   font-weight: 600;
   color: var(--white);
   text-transform: capitalize;
@@ -218,7 +217,7 @@ input[type="text"] {
   }
 
   .abcd {
-    height: 40vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,7 +420,7 @@ input[type="text"] {
   }
 
   .abcd {
-    height: 45vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -444,7 +443,7 @@ input[type="text"] {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--white);
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     text-transform: capitalize;
     letter-spacing: 2px;
     z-index: 2;
