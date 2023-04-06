@@ -50,7 +50,7 @@ return (
 				<div className="card">
 					<center><img src={seenu}/></center>
 					<center>
-						<div className="card-title">Sunny Rajput</div>
+						<div className="card-title1">Sunny Rajput</div>
 						<div id="detail">
 							<div className="det">
                                     <p>Student - BE</p>
@@ -67,7 +67,7 @@ return (
               <div className="card">
 					<center><img src={moksha}/></center>
 					<center>
-						<div className="card-title">Moksha Sarvaiya</div>
+						<div className="card-title1">Moksha Sarvaiya</div>
 						<div id="detail">
 							<div className="det">
                                 <p>Student - BE</p>
@@ -84,7 +84,7 @@ return (
                 <div className="card">
 					<center><img src={kishor}/></center>
 					<center>
-						<div className="card-title">Kishor Prajapati</div>
+						<div className="card-title1">Kishor Prajapati</div>
 						<div id="detail">
                                 <div className="det">
                                     <p>Student - BE</p>
