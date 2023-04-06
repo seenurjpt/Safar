@@ -39,7 +39,7 @@ const Destinations = () => {
             <img src={desbanner} alt="" />
           </div>
           <div className="abc">
-            <p className="contact-fade">Destinations</p>
+            <p className="dest-fade">Destinations</p>
             <p className="about-banner-text">Explore the beauty</p>
           </div>
         </section>
