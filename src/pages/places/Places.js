@@ -102,8 +102,8 @@ const Gallery = () => {
             <img src={gallery_banner} alt="" />
         </div>
         <div class="content">
-            <p class="txxt">Gallery</p>
-            <p class="text">explore  the world with us</p>
+            <p class="gallery-fade">Gallery</p>
+            <p class="gallery-fade-text">explore  the world with us</p>
 
         </div>
     </section>

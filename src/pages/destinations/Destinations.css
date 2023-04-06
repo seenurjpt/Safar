@@ -20,10 +20,15 @@
     font-family: "Lobster", cursive;
     letter-spacing: 3px;
 }
-.contact-fade{
-    font-size: 8em;
+.dest-fade{
+    position: relative;
+    opacity: 0.1;
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+    letter-spacing: 15px;
     margin-top: 50px;
-    color: rgba(245, 243, 243, 0.6);
+    color: var(--bg-color);
 }
 .container{
     display: flex;
@@ -42,12 +47,12 @@
     box-shadow: 20px 20px 15px;
 }
 .about-banner img{
-    height: auto;
+    height: 40vh;
     width: auto;
     filter: brightness(50%);
     position: absolute;
 }
-.abc{
+.abc1{
     align-items: left;
 }
 .about-banner-text{
@@ -88,7 +93,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -134,7 +139,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -179,7 +184,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -224,7 +229,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -270,7 +275,7 @@
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .about-banner-text{
