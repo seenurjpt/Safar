@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../header/Header1.css";
+import user from '../../../assets/user.png'
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -21,13 +22,13 @@ function Header() {
           <div className="navlinks">
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
-                <NavLink to="/home" ClassName="active" >
+                <NavLink to="/home" ClassName="active">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink  to="/destinations" activeClassName="active">
-                 Destinations
+                <NavLink to="/destinations" activeClassName="active">
+                  Destinations
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -36,28 +37,25 @@ function Header() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink  to="/packages" activeClassName="active">
+                <NavLink to="/packages" activeClassName="active">
                   Packages
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink  to="/about" activeClassName="active">
+                <NavLink to="/about" activeClassName="active">
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink  to="/contact" activeClassName="active">
+                <NavLink to="/contact" activeClassName="active">
                   Contact Us
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink  to="/booking" activeClassName="active">
-                  Book Here
-                </NavLink>
-              </li> */}
               <li className="nav-item">
-                <NavLink  to="/login" ClassName="active-nav">
-                <i class="fa-solid fa-circle-user"></i>
+                <NavLink to="/login" ClassName="">
+                {/* <ion-icon name="person-circle-outline"></ion-icon> */}
+                Login/Sign Up
+                  {/* <img src={user} /> */}
                 </NavLink>
               </li>
             </ul>

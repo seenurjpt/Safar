@@ -1,3 +1,15 @@
+/* =====Color Pallets===== */
+
+:root {
+  --primary-color: #000f71;
+  --primary-shades: #00020b;
+  --para-color: #80849c;
+  --helper-color: #0327c6;
+  --white: #fff;
+  --bg-color: #e6e6eb;
+}
+
+
 /* About=========================>  */
 .diffSection{
     border-bottom: 1px var(--primary-shades) solid;
@@ -243,7 +255,7 @@
       color: #fff;
   }
   
-  .card-title {
+  .card-title1 {
       font-size: 17px;
       color: #343A40;
       padding: 20px;
