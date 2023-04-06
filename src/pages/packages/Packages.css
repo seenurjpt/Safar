@@ -26,7 +26,7 @@
 }
 .about-fade{
     position: relative;
-    font-size: 14rem;
+    font-size: 13rem;
     font-weight: 1000;
     opacity: 0.3;
     color: var(--primary-color);
