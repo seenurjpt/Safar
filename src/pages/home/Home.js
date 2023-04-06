@@ -1,74 +1,42 @@
 import React from "react";
-import "./Home.css"
-import binoculars from "../../assets/binoculars.png"
-import map_marker from "../../assets/map-marker.png"
-import tickets from "../../assets/tickets.png"
-
+import { Link } from "react-router-dom";
+import "./Home.css";
+import binoculars from "../../assets/binoculars.png";
+import map_marker from "../../assets/map-marker.png";
+import tickets from "../../assets/tickets.png";
 
 const Home = (props) => {
   return (
     <>
-    {console.log(props)}
+      {console.log(props)}
+
+      {/* =====Main Section===== */}
       <div className="intro">
         <div className="intro-header">
+
+          {/* =====Main Text===== */}
           <div>
             <p className="flex-shrink-1 saf-1">YOUR सFAR STARTS HERE...</p>
           </div>
 
           <div className="pt-5 ">
+            
+            {/* =====Explore Button===== */}
             <div className="explore ">
-              <div className="explore-btn rounded-5">
+              <div className="explore-btn rounded-5 ">
                 <ion-icon name="earth" className="earth px-2"></ion-icon>
-                <a href="#">Explore</a>
+                <Link to="/booking">Explore</Link>
               </div>
             </div>
-
-            {/* <div className="card-1">
-              <div className="card-hero  rounded-5">
-                <div className="loc d-flex ">
-                  <ion-icon
-                    name="location-outline"
-                    className="location"
-                  ></ion-icon>
-                  <div className="px-4">
-                    <p>Location</p>
-                    <p className="fs-6 fw-bold">Explore Nearby</p>
-                  </div>
-                </div>
-
-                <div className="cyc d-flex">
-                  <ion-icon name="bicycle-outline" className="cycle"></ion-icon>
-                  <div className="px-4">
-                    <p>Activity</p>
-                    <p className="fs-6 fw-bold">All Activities</p>
-                  </div>
-                </div>
-
-                <div className="dat d-flex">
-                  <ion-icon name="calendar-outline" className="when"></ion-icon>
-                  <div className="px-4">
-                    <p>When</p>
-                    <p className="fs-6 fw-bold">Choose A Date</p>
-                  </div>
-                </div>
-
-                <div className="gus d-flex ">
-                  <ion-icon name="people-outline" className="guests"></ion-icon>
-                  <div className="px-4">
-                    <p>Guests</p>
-                    <p className="fs-6 fw-bold">1 Guest</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
 
-      <div id="services" >
+      {/* =====Services Section===== */}
+      <div id="services">
         <div className="services container">
           <div className="bino">
-            <img src={binoculars}/>
+            <img src={binoculars} />
             <p className="fw-bold">Search Your Destination</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta a
@@ -78,7 +46,7 @@ const Home = (props) => {
           </div>
 
           <div className="tick">
-            <img src={tickets}/>
+            <img src={tickets} />
             <p className="fw-bold">Get Your Tickets</p>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -89,7 +57,7 @@ const Home = (props) => {
           </div>
 
           <div className="map-loc">
-            <img src= {map_marker}/>
+            <img src={map_marker} />
             <p className="fw-bold">Travel Around The Country</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero at

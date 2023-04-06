@@ -1,3 +1,4 @@
+/* =====Color Pallets===== */
 :root {
   --primary-color: #000f71;
   --primary-shades: #00020b;
@@ -7,51 +8,27 @@
   --bg-color: #e6e6eb;
 }
 
-/* header {
-  width: 100%;
-  z-index: 9;
+/* =====Logo Style===== */
 
-} */
-
-/* .navbar {
-  height: 4.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-.navlinks ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding-bottom: 0.5rem;
+.logo-1 {
+  margin-bottom: 15px;
+  margin-left: 20px;
 }
 
-
-.navlinks ul a {
-  font-size: 1rem;
-  text-decoration: none;
+.sa {
+  font-size: 2.5rem;
   color: var(--primary-color);
 }
 
-.navlinks ul a,
-.navlinks ul a:visited {
-  font-weight: 600;
+.far {
+  font-size: 1.5rem;
+  padding-top: 20.89px;
+  color: #0327c6;
 }
 
-.navlinks ul a:active {
-  color: var(--helper-color);
 
-}
+/* =====Footer=====  */
 
-.active {
-  background-color: #3179ff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--bg-color);
-}
-
-/* Footer  */
 .footer-x {
   display: flex;
   justify-content: center;
@@ -62,32 +39,17 @@
   background-color: #000422;
 }
 
-.copyright>p {
-  margin-top: 1rem;
-  color: var(--bg-color);
-}
+
+/* =====Footer Navigations=====  */
 
 .foot-links {
   display: flex;
-  /* flex-direction: column; */
   gap: 1rem;
 }
 
 .foot-links1 {
   display: flex;
   gap: 1rem;
-}
-.socio{
-  margin-top: 20px;
-}
-.socio a,
-.socio a:visited {
-  color: var(--helper-color);
-}
-
-.socio a:hover,
-.socio a:active {
-  color: var(--bg-color);
 }
 
 .foot-nav a,
@@ -102,8 +64,49 @@
 }
 
 
+/* =====Social Media===== */
 
-@media(max-width: 600px) {
+.socio {
+  margin-top: 20px;
+}
+
+.socio a,
+.socio a:visited {
+  color: var(--helper-color);
+}
+
+.socio a:hover,
+.socio a:active {
+  color: var(--bg-color);
+}
+
+
+/* =====Copyrights=====  */
+
+.copyright>p {
+  margin-top: 1rem;
+  color: var(--bg-color);
+}
+
+
+/* =====Codes For Responsiveness===== */
+
+@media screen and (max-width: 960px) {
+
+  /* =====logo style===== */
+
+  .sa {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+
+  .far {
+    font-size: 1.5rem;
+    padding-top: 20.59px;
+    color: var(--helper-color);
+  }
+
+  /* =====footer navigations===== */
   .foot-links {
     display: flex;
     flex-direction: column;

@@ -10,6 +10,7 @@ import Places from './pages/places/Places'
 import Packages from './pages/packages/Packages1';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
+import Booking from './pages/booking/booking';
 import Login from './pages/login/Login';
 
 function App() {
@@ -35,12 +36,14 @@ const [data, setData] = useState()
     <Routes>
         <Route path="home" element={<Home  data={data} />} />
         <Route path="" element={<Navigate to="/home" />}/>
-        <Route path="/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
+        <Route path="booking" element={<Booking />} />
         <Route path="destinations" element={<Destinations />} />
         <Route path="places" element={<Places/>} />
         <Route path="packages" element={<Packages />} />
         <Route path="about" element={<About/>} />
         <Route path="contact" element={<Contact />} /> 
+        <Route path="booking" element={<Booking/>}/>
     </Routes>
 
     <Footer/>
