@@ -28,13 +28,13 @@ const Packages = () => {
     <>
       <div>
         <div className="banner">
-          <div className="about-banner">
+          <div className="pack-banner">
             <img src={bannerpack} alt="" />
           </div>
 
-          <div className="abc">
-            <p className="about-fade">Packages</p>
-            <p className="about-banner-text">Find Your Trip</p>
+          <div className="abc1">
+            <p className="pack-fade">Packages</p>
+            <p className="pack-fade-text">Find Your Trip</p>
           </div>
         </div>
       </div>
