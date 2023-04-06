@@ -38,7 +38,7 @@ const Destinations = () => {
           <div className="about-banner">
             <img src={desbanner} alt="" />
           </div>
-          <div className="abc">
+          <div className="abc1">
             <p className="dest-fade">Destinations</p>
             <p className="about-banner-text">Explore the beauty</p>
           </div>
