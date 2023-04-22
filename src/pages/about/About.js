@@ -1,18 +1,18 @@
 import React from 'react'
 import '../about/About.css'
+import { Link } from "react-router-dom";
 import about_banner from '../../assets/About_images/about-banner.jpg'
 import about_img from '../../assets/About_images/about-img.jpg'
 import seenu from '../../assets/About_images/seenu.jpg'
 import moksha from '../../assets/About_images/Moksha.jpg'
 import  kishor from '../../assets/About_images/kishor.jpg'
 import  bag from '../../assets/About_images/bag.jpg'
-// import { useState } from 'react'
-// import '../../global.css'
 
 const About = () => {
 
 return (
 <>
+        <div className='background-color'>
        <div className="banner">
             <div className="about-bannerr">
                 <img src={about_banner} alt="" />
@@ -20,10 +20,9 @@ return (
            
             <div className="abcd">
                 <p className="about-fade">About</p>
-                <p className="about-banner-text">About Us</p>
+                <p className="about-bannerr-text">About Us</p>
             </div>
         </div>
-    {/* </div> */}
 
     <div className='aboutus11'>
         <div className="container about-section">
@@ -32,7 +31,7 @@ return (
             </div>
             <div className="about">
 
-                <h1>About us </h1>
+                <p><h1>About us </h1></p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, pariatur. Laboriosam vero itaque
                     sint, repellat assumenda corporis, a provident nulla optio eius alias vitae dicta fugiat cumque
                     accusantium pariatur rem?</p>
@@ -50,7 +49,7 @@ return (
 				<div className="card">
 					<center><img src={seenu}/></center>
 					<center>
-						<div className="card-title1">Sunny Rajput</div>
+						<div className="card-title1"><p>Sunny Rajput</p></div>
 						<div id="detail">
 							<div className="det">
                                     <p>Student - BE</p>
@@ -67,7 +66,7 @@ return (
               <div className="card">
 					<center><img src={moksha}/></center>
 					<center>
-						<div className="card-title1">Moksha Sarvaiya</div>
+						<div className="card-title1"><p>Moksha Sarvaiya</p></div>
 						<div id="detail">
 							<div className="det">
                                 <p>Student - BE</p>
@@ -84,7 +83,7 @@ return (
                 <div className="card">
 					<center><img src={kishor}/></center>
 					<center>
-						<div className="card-title1">Kishor Prajapati</div>
+						<div className="card-title1"><p>Kishor Prajapati</p></div>
 						<div id="detail">
                                 <div className="det">
                                     <p>Student - BE</p>
@@ -122,11 +121,11 @@ return (
        </div>
 
        <div className="want">
-        <h1>Want To Travel With Us?</h1>
-        <a href="">Book Now</a>
+        <p><h1>Want To Travel With Us?</h1></p>
+        <Link to="/booking">Book Now</Link>
        </div>
        </div>
-
+       </div>
     </>
   )
 }

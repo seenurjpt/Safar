@@ -17,7 +17,7 @@ const Contact = () => {
       <div class="row ola">
         <div class="col-sm-1 col-1">
           <div class="card1 d-flexl- justify-content-center">
-            <h1>Contact Info</h1>
+            <p><h1>Contact Info</h1></p>
 
             <div class="info11">
               <div>
@@ -65,13 +65,13 @@ const Contact = () => {
               <form>
                 <div class="d-flex gap-5 w-100 py-sm-3">
                   <div>
-                    <label for="fname">First name:</label>
+                    <label for="fname"><p>First name:</p></label>
                     <br />
                     <input type="text" id="fname" name="fname" class="effect" />
                     <br />
                   </div>
                   <div>
-                    <label for="lname">Last name:</label> <br />
+                    <label for="lname"><p>Last name:</p></label> <br />
                     <input type="text" id="lname" name="lname" class="effect" />
                     <br />
                   </div>
@@ -79,7 +79,7 @@ const Contact = () => {
 
                 <div class="d-flex gap-5 w-100 py-sm-3 py-2 ">
                   <div>
-                    <label for="fname">Email id:</label>
+                    <label for="fname"><p>Email id:</p></label>
                     <br />
                     <input
                       type="email"
@@ -90,7 +90,7 @@ const Contact = () => {
                     <br />
                   </div>
                   <div>
-                    <label for="fname">Phone no.:</label>
+                    <label for="fname"><p>Phone no.:</p></label>
                     <br />
                     <input
                       type="number"
@@ -102,7 +102,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <label for="lname">Write something here...</label>
+                  <label for="lname"><p>Write something here...</p></label>
                   <br />
                   <textarea
                     name=""
