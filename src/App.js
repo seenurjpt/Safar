@@ -12,18 +12,19 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Booking from './pages/booking/booking';
 import Login from './pages/login/Login';
+import Admin from './pages/admin/admin';
+import Toggle from './components/toggle/Toggle';
 
 function App() {
 
 const [data, setData] = useState()
   const getApi = () =>{
-    axios.get("http://localhost:3004/users")
+    axios.get("http://localhost:3004/Packages")
     .then((result) => {
       console.log(result)
       setData(result.data)
     })
   }
-
 
   useEffect(() => {
     getApi()  
@@ -33,6 +34,7 @@ const [data, setData] = useState()
     <BrowserRouter>
 
     <Header/>
+    <Toggle/>
     <Routes>
         <Route path="home" element={<Home  data={data} />} />
         <Route path="" element={<Navigate to="/home" />}/>
@@ -44,6 +46,7 @@ const [data, setData] = useState()
         <Route path="about" element={<About/>} />
         <Route path="contact" element={<Contact />} /> 
         <Route path="booking" element={<Booking/>}/>
+        <Route path="admin" element={<Admin/>}/>
     </Routes>
 
     <Footer/>
