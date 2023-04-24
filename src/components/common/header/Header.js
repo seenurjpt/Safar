@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../header/Header1.css";
-import user from '../../../assets/user.png'
 
 function Header() {
   const [click, setClick] = useState(false);
-
+ 
   const handleClick = () => setClick(!click);
+
+  // const logoutWithRedirect = () =>
+  // logout({
+  //     logoutParams: {
+  //       returnTo: window.location.origin,
+  //     }
+  // });
+  // const [theme, setTheme] = useState("light-mode");
+
+  // const changeTheme = () => {
+  //  if(theme === "dark-mode"){
+  //   setTheme("light-mode");
+  //  } else{
+  //   setTheme("dark-mode");
+  //  }
+  // };
+
+  // useEffect(()=> {
+  //   document.body.className = theme;
+  // }, [theme])
+
   return (
     <>
       <nav className="navbar">
@@ -19,6 +39,9 @@ function Header() {
               <p className="far fw-bolder">FAR</p>
             </div>
           </div>
+
+          {/* <div><ion-icon name="contrast-outline" onClick={()=> changeTheme()}></ion-icon></div> */}
+
           <div className="navlinks">
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
@@ -52,12 +75,45 @@ function Header() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/login" ClassName="">
-                {/* <ion-icon name="person-circle-outline"></ion-icon> */}
-                Login/Sign Up
-                  {/* <img src={user} /> */}
+                <NavLink to="/login" activeClassName="active">
+                  Login
                 </NavLink>
               </li>
+
+              {/* {isAuthenticated ? (
+                <li className="nav-item">
+                  <NavLink
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
+                  >
+                    Logout
+                  </NavLink>
+                </li>
+              ) : (
+                <li className="nav-item">
+                  <NavLink onClick={() => loginWithRedirect()}>Login</NavLink>
+                </li>
+              )}
+{console.log("LOGIN",user)} */}
+{/* {console.log("LOGIN",isAuthenticated)}
+<li className="nav-item">
+                  <NavLink
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
+                  >
+                    Logout
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink onClick={() => loginWithRedirect()}>Login</NavLink>
+                </li> */}
+
             </ul>
           </div>
           <div className="nav-icon" onClick={handleClick}>

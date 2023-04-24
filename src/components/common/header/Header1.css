@@ -1,14 +1,3 @@
-/* =====Color Pallets===== */
-:root {
-  --primary-color: #000f71;
-  --primary-shades: #00020b;
-  --para-color: #80849c;
-  --helper-color: #0327c6;
-  --white: #fff;
-  --bg-color: #e6e6eb;
-}
-
-
 /* =====Logo Style===== */
 
 .logo-1 {
@@ -18,13 +7,13 @@
 
 .sa {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--sa-color);
 }
 
 .far {
   font-size: 1.5rem;
-  padding-top: 20.89px;
-  color: #0327c6;
+  padding-top: 24px;
+  color: var(--far-color);
 }
 
 
@@ -77,11 +66,8 @@
 
 .nav-item {
   line-height: 40px;
-  /* margin-right: 1rem; */
 }
 .nav-item ion-icon{
-  /* color: var(--para-color ); */
-  /* margin-top: 8px; */
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -116,13 +102,13 @@
 
   .sa {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--sa-color);
   }
 
   .far {
     font-size: 1.5rem;
     padding-top: 30px;
-    color: var(--helper-color);
+    color: var(--far-color);
   }
 
   /* =====navbar===== */
@@ -131,7 +117,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: 1pxsolid #fff;
+    border-top: 1pxsolid var(--white);
     position: absolute;
     top: 79px;
     left: -110%;
@@ -140,7 +126,7 @@
   }
 
   .nav-menu.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--navbar-mini);
     backdrop-filter: blur(5px);
     left: 0px;
     opacity: 1;
