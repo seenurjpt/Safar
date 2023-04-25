@@ -1,41 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-:root {
-    --primary-color: #000f71;
-    --primary-shades: #00020b;
-    --para-color: #80849c;
-    --helper-color: #1264fa;
-    --white: #ffffff;
-    --bg-color: #e6e6eb;
-}
-.boss{
-    margin-top: 90px;
-}
 
-.about-banner img{
+.boss{
+    margin-top: 10px;
+}
+.wholee{
+    padding: 1rem;
+}
+.pack-banner img{
     height: 100vh; 
     width: 100%;
     position: absolute;
 }
-.abc{
+.abc1{
     height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.about-fade{
+.pack-fade{
     position: relative;
-    font-size: 14rem;
+    font-size: 13rem;
     font-weight: 1000;
-    opacity: 0.3;
-    color: var(--primary-color);
+    opacity: 0.19;
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 40px;
     /* z-index: 1; */
 }
-.about-banner-text{
+.pack-fade-text{
     /* position: relative; */
     position: absolute;
-    font-size: 4.5rem;
+    font-size: 4rem;
+    margin-top: 40px;
     font-weight: 600;
     color: var(--white);
     text-transform:capitalize;
@@ -43,16 +39,19 @@
 }
 .imag{
     position: relative;
+    filter: brightness(70%);
 }
 .txt{
     position: absolute;
     color: var(--white);
-    font-family:'Lobster', cursive; 
+    /* font-family:'Lobster', cursive;  */
     padding: 25px;
 }
 .imag:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.2s;
+    filter: brightness(100%);
+    z-index: 15;
 }
 .modal-header{
     background-color: var(--helper-color);
@@ -69,35 +68,40 @@
     background-color: var(--bg-color);
     padding-bottom: 30px;
 }
-
+.booking_link,
+.booking_link:hover{
+    text-decoration: none;
+    color: var(--white);
+} 
 @media (max-width:1680px) {
 
     .imag {
         position: relative;
         height: 400px;
-        width: 320px;
+        width: 280px;
         border-radius: 30px;
     }
     .boss{
         margin-top: 110px;
     }
-    .about-banner img{
+    .pack-banner img{
         /* opacity: 1; */
         height: 45vh; 
         width: 100%;
         position: absolute;
     }
-    .about-fade{
+    .pack-fade{
         position: relative;
+        margin-top: 30px;
         font-size: 13rem;
         font-weight: 1000;
-        opacity: 0.3;
-        color: var(--primary-color);
+        opacity: 0.19;
+        color: var(--white);
         text-transform: uppercase;
         letter-spacing: 30px;
         /* z-index: 1; */
     }
-    .about-banner-text{
+    .pack-fade-text{
         /* position: relative; */
         position: absolute;
         font-size: 6.5rem;
@@ -109,6 +113,7 @@
 
     .pack_imag {
         margin-top: 24px;
+        /* margin-bottom: 1rem; */
         overflow-y: hidden;
         overflow-x: hidden;
         height: 402px;
@@ -118,12 +123,11 @@
         flex-flow: row nowrap;
         flex-wrap: nowrap;
     }
-    .about-banner img{
+    .pack-banner img{
         height: 55vh; 
         min-width: 100%;
         position: absolute;
     }
-
 
     .rol {
         display: flex;
@@ -134,11 +138,11 @@
     .tx {
         min-width: 17%;
         max-height: 40%;
-
     }
 
 .tx p {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        font-weight: 900;
     }
 }
 
@@ -152,22 +156,22 @@
     .boss{
         margin-top: 80px;
     }
-    .about-banner img{
+    .pack-banner img{
         height: 51vh; 
         min-width: 100%;
         position: absolute;
     }
-    .about-fade{
+    .pack-fade{
         position: relative;
         font-size: 11rem;
         font-weight: 1000;
-        opacity: 0.3;
-        color: var(--primary-color);
+        opacity: 0.19;
+        color: var(--white);
         text-transform: uppercase;
         letter-spacing: 25px;
         /* z-index: 1; */
     }
-    .about-banner-text{
+    .pack-fade-text{
         /* position: relative; */
         position: absolute;
         font-size: 6rem;
@@ -220,22 +224,22 @@
     .boss{
         margin-top: 50px;
     }
-    .about-banner img{
+    .pack-banner img{
         height: 48vh; 
         min-width: 100%;
         position: absolute;
     }
-    .about-fade{
+    .pack-fade{
         position: relative;
         font-size: 8.5rem;
         font-weight: 1000;
-        opacity: 0.3;
-        color: var(--primary-color);
+        opacity: 0.19;
+        color: var(--white);
         text-transform: uppercase;
         letter-spacing: 20px;
         /* z-index: 1; */
     }
-    .about-banner-text{
+    .pack-fade-text{
         /* position: relative; */
         position: absolute;
         font-size: 4.5rem;
@@ -288,23 +292,23 @@
     .boss{
         margin-top: 30px;
     }
-    .about-banner img{
+    .pack-banner img{
         
         height: 45vh; 
         min-width: 100%;
         position: absolute;
     }
-    .about-fade{
+    .pack-fade{
         position: relative;
         font-size: 5.8rem;
         font-weight: 1000;
-        opacity: 0.3;
-        color: var(--primary-color);
+        opacity: 0.19;
+        color: var(--white);
         text-transform: uppercase;
         letter-spacing: 15px;
         /* z-index: 1; */
     }
-    .about-banner-text{
+    .pack-fade-text{
         /* position: relative; */
         position: absolute;
         font-size: 3rem;
@@ -357,22 +361,22 @@
     .boss{
         margin-top:0px;
     }
-    .about-banner img{
+    .pack-banner img{
         height: 41vh; 
         min-width: 100%;
         position: absolute;
     }
-    .about-fade{
+    .pack-fade{
         position: relative;
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 1000;
-        opacity: 0.3;
-        color: var(--primary-color);
+        opacity: 0.19;
+        color: var(--white);
         text-transform: uppercase;
         letter-spacing: 10px;
         /* z-index: 1; */
     }
-    .about-banner-text{
+    .pack-fade-text{
         /* position: relative; */
         position: absolute;
         font-size: 2rem;

@@ -90,20 +90,17 @@ import Vrundavan_holi from "../../assets/gallery/vrindavan holi.jpeg"
 import wular_lake from "../../assets/gallery/wular_lake.jfif"
 
 
-
-
-
 const Gallery = () => {
   return (
-   <>
+   <div className='background-color'>
 
     <section>
         <div class="banner">
             <img src={gallery_banner} alt="" />
         </div>
         <div class="content">
-            <p class="txxt">Gallery</p>
-            <p class="text">explore  the world with us</p>
+            <p class="gallery-fade">Gallery</p>
+            <p class="gallery-fade-text">explore  the world with us</p>
 
         </div>
     </section>
@@ -832,7 +829,7 @@ const Gallery = () => {
     </div>
 
  
-   </>
+   </div>
   )
 }
 
