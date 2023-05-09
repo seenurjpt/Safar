@@ -48,9 +48,7 @@ const Contact = () => {
               <a href="https://www.instagram.com">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
-              <a href="https://in.pinterest.com/">
-                <i class="bi bi-pinterest kk"></i>
-              </a>
+              
             </div>
           </div>
         </div>

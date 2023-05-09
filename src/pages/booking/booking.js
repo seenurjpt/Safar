@@ -22,7 +22,7 @@ const Booking = () => {
   }, []);
 
   const mailregex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-  const phoneregex = /^[1-9][0-9]{8}$/;
+  const phoneregex = /^[7-9][0-8]{9}$/;
   const currentDate = new Date().toISOString().split("T")[0];
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
