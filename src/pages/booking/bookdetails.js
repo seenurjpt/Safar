@@ -1,8 +1,20 @@
-import { React, useState, useEffect } from "react";
+import { React, useState,useEffect} from "react";
 import axios from "axios";
 import "../booking/booking.css";
+import { useLocation } from "react-router-dom";
 
-const Booking = () => {
+const BookPackage = () => {
+  const location= useLocation()
+  const [data1, setData1] = useState([]);
+  const getApi1 = () => {
+    axios.get("http://localhost:3004/booking").then((result1) => {
+      setData1(result1.data);
+    });
+  };
+
+  useEffect(() => {
+    getApi1();
+  }, []);
   const [val, setVal] = useState({
     Name: "",
     Mail: "",
@@ -14,56 +26,48 @@ const Booking = () => {
     Adults: "",
     Seniors: "",
   });
-  const [pop, setPop] = useState({})
 
-  const [data, setData] = useState([]);
-  const [data1, setData1] = useState([]);
-
-  const [regionid, setRegionid] = useState("");
-  const [placeid, setPlaceid] = useState("");
-  const [place, setPlace] = useState([]);
   const currentDate = new Date().toISOString().split("T")[0];
+  // const [placeid, setPlaceid] = useState("");
+  // const [place, setPlace] = useState([]);
 
-  const getApi = () => {
-    axios.get("http://localhost:3004/packages").then((result) => {
-      setData(result.data);
-    });
-  };
-  const getApi1 = () => {
-    axios.get("http://localhost:3004/booking").then((result1) => {
-      setData1(result1.data);
-    });
-  };
+  // const getApi = () => {
+  //   axios.get("http://localhost:3004/packages").then((result) => {
+  //     setData(result.data);
+  //   });
+  // };
+  // const getApi1 = () => {
+  //   axios.get("http://localhost:3004/booking").then((result1) => {
+  //     setData1(result1.data);
+  //   });
+  // };
 
-  useEffect(() => {
-    getApi();
-    getApi1();
-  }, []);
+  // useEffect(() => {
+  //   getApi();
+  //   getApi1();
+  // }, []);
 
-  const handleReg = (e) => {
-    const getregId = e.target.value;
-    const getPlacedata = data.find(
-      (region) => region.pack_id == getregId
-    )?.places;
-    setPlace(getPlacedata);
-    setRegionid(getregId);
-  };
+  // const handleReg = (e) => {
+  //   const getregId = e.target.value;
+  //   const getPlacedata = data.find(
+  //     (region) => region.pack_id == getregId
+  //   )?.places;
+  //   setPlace(getPlacedata);
+  //   setRegionid(getregId);
+  // };
 
-  const handlePack = (e) => {
-    const packId = e.target.value;
-    setPlaceid(packId);
-  };
+  // const handlePack = (e) => {
+  //   const packId = e.target.value;
+  //   setPlaceid(packId);
+  // };
 
   const handleChange = (e) => {
-    setVal({ ...val, [e.target.name]: e.target.value });
-    setPop({...val, [e.target.name]: e.target.value})
+    setVal({ ...val, [e.target.name]: e.target.value, Package:location.state.pack});
   };
+  // const newData = {...val, Package:location.state.pack}
 
   const handleSubmit = () => {
-    axios.post("http://localhost:3004/booking", val).then((result) => {
-      console.log("abcdefg", result);
-
-    });
+    axios.post("http://localhost:3004/booking", val).then((result) => {});
      setVal({   Name: "",
      Mail: "",
      Phone: "",
@@ -87,7 +91,7 @@ const Booking = () => {
         <div className="card shadow  bg-white  rounded-5">
           <div className="card-body rounded-3 ">
             <p className="card-title text-center shadow mt-5 rounded-2">
-              Travel Booking Form
+              Book For {location.state.pack}
             </p>
 
             <div className="icons text-center">
@@ -114,7 +118,6 @@ const Booking = () => {
                   required
                 />
               </div>
-              {console.log("pop", pop)}
 
               <div className="col-sm-6">
                 <input
@@ -138,7 +141,6 @@ const Booking = () => {
                 <input
                   placeholder="Phone Number (e.g. 1234567890)"
                   type="tel"
-                  maxLength={10}
                   id="date-picker-example"
                   className="form-control pb-2"
                   name="Phone"
@@ -163,54 +165,6 @@ const Booking = () => {
                   onChange={(e) => handleChange(e)}
                   required
                 />
-              </div>
-            </div>
-
-            <div className="row pt-4">
-              <div className="col-sm-6">
-                <select
-                  className="browser-default custom-select pb-p"
-                  id="select"
-                  name="Region"
-                  value={val?.Region}
-                  onChange={(e) => {
-                    handleChange(e);
-                    handleReg(e);
-                  }}
-                  required
-                >
-                  <option disabled="" selected="">
-                    Select Region
-                  </option>
-                  {data.map((option, index) => (
-                    <option key={index} value={option.pack_id}>
-                      {option.title}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="col-sm-6">
-                <select
-                  className="browser-default custom-select mb-4"
-                  id="select"
-                  name="Package"
-                  value={val?.Package}
-                  onChange={(e) => {
-                    handleChange(e);
-                    handlePack(e);
-                  }}
-                  required
-                >
-                  <option value="" disabled="" selected="">
-                    Packages
-                  </option>
-                  {place.map((pl, index) => (
-                    <option value={pl.place} key={index}>
-                      {pl.place}
-                    </option>
-                  ))}
-                </select>
               </div>
             </div>
 
@@ -287,9 +241,6 @@ const Booking = () => {
               Submit
             </button>
 
-         {
-
-         }
             <div
               class="modal fade"
               id="exampleModal"
@@ -301,32 +252,23 @@ const Booking = () => {
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Booking Details
+                      Thanks For Booking With Us..!!!
                     </h1>
                     <button
                       type="button"
                       class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
+                      // data-bs-dismiss="modal"
+                      // aria-label="Close"
                     ></button>
                   </div>
 
                   <div class="modal-body">
-                    <p>Name : {pop?.Name}</p> 
-                    <p>Package : {pop?.Package}</p> 
-                    <p>Date: {pop?.Date}</p>
-                    
-              <div className="d-flex gap-3">
-              <p>
-                      Kids : {pop?.Kids}
-                    </p>
+                    <p>Name : {data1[data1.length - 1]?.Name}</p>
+                    <p>Package : {data1[data1.length - 1]?.Package}</p>
+                    <p>Date: {data1[data1.length - 1]?.Date}</p>
                     <p>
-                      Adults: {pop?.Adults}
+                      Number of persons : {data1[data1.length - 1]?.Persons}
                     </p>
-                    <p>
-                      Seniors : {pop?.Seniors}
-                    </p>
-              </div>
                   </div>
 
                   <div class="modal-footer">
@@ -337,7 +279,11 @@ const Booking = () => {
                     >
                       Close
                     </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -348,4 +294,4 @@ const Booking = () => {
   );
 };
 
-export default Booking;
+export default BookPackage;
