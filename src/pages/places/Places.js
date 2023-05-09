@@ -90,12 +90,9 @@ import Vrundavan_holi from "../../assets/gallery/vrindavan holi.jpeg"
 import wular_lake from "../../assets/gallery/wular_lake.jfif"
 
 
-
-
-
 const Gallery = () => {
   return (
-   <>
+   <div className='background-color'>
 
     <section>
         <div class="banner">
@@ -832,7 +829,7 @@ const Gallery = () => {
     </div>
 
  
-   </>
+   </div>
   )
 }
 
