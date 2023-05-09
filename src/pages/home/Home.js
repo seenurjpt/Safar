@@ -1,13 +1,30 @@
-import React from "react";
+import {React, useEffect,useState }from "react";
 import { Link } from "react-router-dom";
+import TypewriterComponent from "typewriter-effect";
 import "./Home.css";
 import binoculars from "../../assets/binoculars.png";
 import map_marker from "../../assets/map-marker.png";
 import tickets from "../../assets/tickets.png";
 
 const Home = (props) => {
+
+    // const [theme, setTheme] = useState("light-mode");
+
+    // const changeTheme = () => {
+    //  if(theme === "dark-mode"){
+    //   setTheme("light-mode");
+    //  } else{
+    //   setTheme("dark-mode");
+    //  }
+    // };
+
+    // useEffect(()=> {
+    //   document.body.className = theme;
+    // }, [theme])
+
+
   return (
-    <>
+    <div className="background-color">
       {console.log(props)}
 
       {/* =====Main Section===== */}
@@ -17,6 +34,14 @@ const Home = (props) => {
           {/* =====Main Text===== */}
           <div>
             <p className="flex-shrink-1 saf-1">YOUR सFAR STARTS HERE...</p>
+            {/* <p className="flex-shrink-1 saf-1"><TypewriterComponent 
+            options={{
+              autoStart: true,
+              loop:true,
+              delay:50,
+              strings:["YOUR सFAR STARTS HERE..."]
+            }}/></p> */}
+
           </div>
 
           <div className="pt-5 ">
@@ -26,6 +51,7 @@ const Home = (props) => {
               <div className="explore-btn rounded-5 ">
                 <ion-icon name="earth" className="earth px-2"></ion-icon>
                 <Link to="/booking">Explore</Link>
+                {/* <a onClick={() => changeTheme()}>Explore</a> */}
               </div>
             </div>
           </div>
@@ -68,7 +94,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

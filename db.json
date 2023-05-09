@@ -1,8 +1,340 @@
 {
-  "users" : [
-    { "id": 1, "name": "sunny", "job": "front-end dev." },
-    { "id": 2, "name": "moksha", "job": "front-end dev." },
-    { "id":  3,"name": "kishor", "job": "front-end dev." }
+  "users": [
+    {
+      "username": "admin",
+      "pass": "admin123",
+      "email": "admin01@gmail.com"
+    },
+    {
+      "username": "seenu",
+      "pass": "seenu2727",
+      "email": "seenu27@gmail.com"
+    },
+    {
+      "username": "moksha",
+      "pass": "moksha1616",
+      "email": "moksha16@gmail.com"
+    },
+    {
+      "username": "kishor",
+      "pass": "kishor6969",
+      "email": "kishor69@gmail.com"
+    }
+  ],
+  "packages": [
+    {
+      "title": "North-India Packages",
+      "pack_id": 1,
+      "places": [
+        {
+          "id": 1,
+          "place": "Devprayag",
+          "location": "Devprayag,Uttrakhand",
+          "description": "Devprayag is one of the beutiful spots to visit in north india. It is the sangam of two rivers Bhagirati and alaknanda which makes it more beautiful.",
+          "duration": "8 Day 9 Night ",
+          "price": "10999",
+          "img": "devprayag.jpeg",
+          "maploc": "https://www.google.com/maps/place/Devprayag,+Uttarakhand/@30.1458786,78.5979081,17z/data=!3m1!4b1!4m6!3m5!1s0x3909090d5b91180d:0x5d7916d17f992317!8m2!3d30.1459471!4d78.5992925!16zL20vMDhrdGZu"
+        },
+        {
+          "id": 2,
+          "place": "Badrinath",
+          "location": "Badrinath, Uttrakhand",
+          "description": "Badrinath Temple is devoted to Lord Badrinath. It is situated in Uttrakhand, India. It is one of the Char Dham Pilgrimage in India",
+          "duration": "11 Days 10 Nights",
+          "price": " 11999",
+          "img": "badrinath.jpeg",
+          "maploc": "https://www.google.com/maps/place/Badrinath,+Uttarakhand+246422/@30.741734,79.4888198,16z/data=!3m1!4b1!4m6!3m5!1s0x39a78e9f973108e7:0xf05a8b5e0c71473!8m2!3d30.7433085!4d79.4937634!16zL20vMDMyOG15"
+        },
+        {
+          "id": 3,
+          "place": "Kedarnath",
+          "location": "Kedarkantha Trek, Uttrakhand",
+          "description": "Kedarkantha (Hindi: केदारकंठ) is a mountain peak of the Himalayas in Uttarakhand, India. Its elevation is 12,500 ft (3,800 m).Kedarkantha is located within Govind Wildlife Sanctuary in Uttarkashi district.A trek to the peak of Kedarkantha usually starts from Sankri, a small village, and takes four days to complete.There are several myths around Kedarkantha and Juda ka Talab, a high altitude lake.",
+          "duration": "13 Days 14 Nights",
+          "price": "17999",
+          "img": "kedarkanth trek.jpeg",
+          "maploc": "https://www.google.com/maps/place/Kedarnath+Temple/@30.7352308,79.0643201,17z/data=!3m1!4b1!4m6!3m5!1s0x39083ee08aa6b0b5:0xdbbdae8b9602ee02!8m2!3d30.7352308!4d79.066895!16s%2Fm%2F026jlcg"
+        },
+        {
+          "id": 4,
+          "place": "Tungnath",
+          "location": "Tungnath, Uttarakhand",
+          "description": "Tungnath is one of the highest Shiva temples in the world and is the highest of the five Panch Kedar temples located in the Rudraprayag district, in the Indian state of Uttarakhand. The Tungnath mountains form the Mandakini and Alaknanda river valleys.",
+          "duration": "11 Days 12 Nights",
+          "price": "14999",
+          "img": "tungnath.jfif",
+          "maploc": "https://www.google.com/maps/place/Tungnath+Temple/@30.4886998,79.2144462,17z/data=!3m1!4b1!4m6!3m5!1s0x39082d76a94ee437:0xc9d695bd8994120a!8m2!3d30.4886998!4d79.2170211!16s%2Fm%2F02qldtc"
+        }
+      ]
+    },
+    {
+      "title": "West-India Packages",
+      "pack_id": 2,
+      "places": [
+        {
+          "id": 5,
+          "place": "Nalsarovar",
+          "location": "Nalsarovar,Gujarat",
+          "description": "Nal Sarovar Bird Sanctuary, consisting primarily of a 120.82-square-kilometre lake and ambient marshes, is situated about 64 km to the west of Ahmedabad near Sanand Village, in the Gujarat state of India.",
+          "duration": "3 Days 4 Nights",
+          "price": " 5999",
+          "img": "nalsarver.png",
+          "maploc": "https://www.google.com/maps/place/Nalsarovar,+Gujarat+382170/@22.8228286,72.0455544,15z/data=!3m1!4b1!4m6!3m5!1s0x395eb15252f72343:0xea7c1aeee34a79e7!8m2!3d22.8209477!4d72.0571863!16s%2Fg%2F1tffbldr"
+        },
+        {
+          "id": 6,
+          "place": "Harihar",
+          "location": "Harihar Fort, Maharastra",
+          "description": "Harihar fort / Harshagad is a fort located 40 km from Nashik City, 48 km from Igatpuri, 40 km from Ghoti in Nashik district, of Maharashtra, India. It is an important fort in Nashik district, and was constructed to look upon the trade route through Gonda Ghat.",
+          "duration": "5 Days 4 Nights",
+          "price": "10299",
+          "img": "harihar.fort.jfif",
+          "maploc": "https://www.google.com/maps/place/Harihar+Fort/@19.904725,73.467067,17z/data=!3m1!4b1!4m6!3m5!1s0x3bdd8aa165defa41:0xbd233aa44468637e!8m2!3d19.9047251!4d73.4719379!16s%2Fg%2F11ddxsrb70"
+        },
+        {
+          "id": 7,
+          "place": "Bahubali Hills",
+          "location": "Bahubali Hills, Udaipur",
+          "description": "Bahubali Hills is one of the beautiful places to visit in Udaipur, Rajasthan. It is the part of the Aravalli Range and famous for its surrounding view.",
+          "duration": "3 Days 4 Nights",
+          "price": " 7999",
+          "img": "Bahubali hills Udaipur.jpeg",
+          "maploc": "https://www.google.com/maps/place/The+wedding+clickers/@24.6242633,73.6147402,17z/data=!3m1!4b1!4m6!3m5!1s0x3967fb8192edf8f1:0x3a43790da32075ff!8m2!3d24.6242633!4d73.6173151!16s%2Fg%2F11g10jmnz0"
+        },
+        {
+          "id": 8,
+          "place": "Kumbhalgarh",
+          "location": "Kumbhalgarh, Rajasthan",
+          "description": "Chilika lake is one of the most attractive places in Orissa. This lake is the largest coastal lagoon in India and has been listed as a UNESCO World Heritage site.",
+          "duration": "4 Days 5 Nights",
+          "price": "6999",
+          "img": "kumbhalgarh.jpeg",
+          "maploc": "https://www.google.com/maps/place/Kumbhalgarh,+Rajasthan+313325/@25.149179,73.5782718,16z/data=!3m1!4b1!4m6!3m5!1s0x39682248240b63df:0xaf6863208d6f66d8!8m2!3d25.1495495!4d73.583705!16s%2Fg%2F1v2yx89t"
+        }
+      ]
+    },
+    {
+      "title": "South-India Packages",
+      "pack_id": 3,
+      "places": [
+        {
+          "id": 9,
+          "place": "Jatayu Statue",
+          "location": "Jatayu Statue, Kerala",
+          "description": "Jatayu Earth Center, also known as Jatayu Nature Park or Jatayu Rock, is a park and tourism centre at Chadayamangalam in Kollam district of Kerala. It stands at an altitude of 350m above the mean sea level. Jatayu Nature Park holds the distinction of having the world's largest bird sculpture, which is of Jatayu.",
+          "duration": "11 Days 10 Nights",
+          "price": "1399",
+          "img": "jatayu parl.jpeg",
+          "maploc": "https://www.google.com/maps/place/Jatayu+Earth's+Center/@8.8606255,75.6475439,9z/data=!4m10!1m2!2m1!1sjatayu+temple!3m6!1s0x3b05ddd5ea2b9599:0x77a24d56f5a90c70!8m2!3d8.8606255!4d76.8670263!15sCg1qYXRheXUgdGVtcGxlWg8iDWphdGF5dSB0ZW1wbGWSARJ0b3VyaXN0X2F0dHJhY3Rpb26aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTnpObEJ5V1hwQlJSQULgAQA!16s%2Fg%2F11bx55ybvv"
+        },
+        {
+          "id": 10,
+          "place": "Rameshwaram",
+          "location": "Rameshwaram, Tamilnadu",
+          "description": "Ramanathaswamy Temple is a Hindu temple dedicated to the god Shiva located on Rameswaram island in the state of Tamil Nadu, India. It is also one of the twelve Jyotirlinga temples. It is one of the 275 Paadal Petra Sthalams, where three of the most revered Nayanars, Appar, Sundarar and Tirugnana Sambandar, have glorified the temple with their songs.",
+          "duration": "11 Days 10 Nights",
+          "price": "1299",
+          "img": "rameshrvam temple.jpg",
+          "maploc": "https://www.google.com/maps/place/Rameswaram,+Tamil+Nadu+623526/@9.2867184,79.3013333,15z/data=!3m1!4b1!4m6!3m5!1s0x3b01e3c4e61cf2b3:0xd667f9b98bbd63a1!8m2!3d9.2876254!4d79.3129291!16zL20vMDIwcF9w"
+        },
+        {
+          "id": 11,
+          "place": "Tirupati Balaji",
+          "location": "Tirupati Balaji, Andrapradesh",
+          "description": "Tirupati is a city in the Indian state of Andhra Pradesh. Its Sri Venkateswara Temple sits atop one of the the 7 peaks of Tirumala Hills, attracting scores of Hindu pilgrims. Sri Venkateswara National Park, home to the temple, also contains the Sri Venkateswara Zoological Park with lions and primates.",
+          "duration": "9 Days 8 Nights",
+          "price": "7499",
+          "img": "tiruati.jpeg",
+          "maploc": "https://www.google.com/maps/place/Venkateswara+Swamy+Temple/@17.4761457,78.5473557,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9b9dc586e44b:0xea0819e00ced60d8!8m2!3d17.4761457!4d78.5499306!16s%2Fg%2F11g8wgg13m"
+        },
+        {
+          "id": 12,
+          "place": "Meenakshi Temple",
+          "location": "Meenakshi Temple, Tamilnadu",
+          "description": "Arulmigu Meenakshi Sundaraswarar Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to the goddess Meenakshi, a form of Shakti, and her consort, Sundareshwarar, a form of Shiva.",
+          "duration": "8 Days 7 Nights",
+          "price": "9999",
+          "img": "Meenakshi Temple.jpeg",
+          "maploc": "https://www.google.com/maps/place/Meenakshi+Amman+Temple/@9.9195045,78.1167669,17z/data=!3m1!4b1!4m6!3m5!1s0x3b00c58461e46987:0xf134621ce5286703!8m2!3d9.9195045!4d78.1193418!16s%2Fm%2F026g1j2"
+        }
+      ]
+    },
+    {
+      "title": "East-India Packages",
+      "pack_id": 4,
+      "places": [
+        {
+          "id": 13,
+          "place": "Darjeeling",
+          "location": "Darjeeling, West Bengal",
+          "description": "Darjeeling is a town in India's West Bengal state, in the Himalayan foothills. Once a summer resort for the British Raj elite, it remains the terminus of the narrow-gauge Darjeeling Himalayan Railway, or “Toy Train,” completed in 1881. It's famed for the distinctive black tea grown on plantations that dot its surrounding slopes.",
+          "duration": "13 Days 14 Nights",
+          "price": "16999",
+          "img": "darhjeeing.png",
+          "maploc": "https://www.google.com/maps/place/Darjeeling,+West+Bengal/@27.0331889,88.2234753,13z/data=!3m1!4b1!4m6!3m5!1s0x39e42e654cf501bb:0x4175555979d4702a!8m2!3d27.0410218!4d88.2662745!16zL20vMDE5amxx"
+        },
+        {
+          "id": 14,
+          "place": "Konark Sun Temple",
+          "location": "Sun Temple, Orissa",
+          "description": "Konark Sun temple, is Dedicated to the Hindu Sun God Surya, what remains of the temple complex has the appearance of a 100-foot (30 m) high chariot with immense wheels and horses, all carved from stone.",
+          "duration": "10 Days 9 Nights",
+          "price": "10499",
+          "img": "konark sun temple.jpeg",
+          "maploc": "https://www.google.com/maps/place/Konark+Sun+Temple/@19.8875953,86.0919615,17z/data=!3m1!4b1!4m6!3m5!1s0x3a19f2a097819bbf:0xed9983ca391e3247!8m2!3d19.8875953!4d86.0945364!16s%2Fm%2F02rd_67"
+        },
+        {
+          "id": 15,
+          "place": "Jagannath Puri",
+          "location": "Jagannath puri, Orissa",
+          "description": "The Jagannath Temple is an important Hindu temple dedicated to Jagannath, a form of Vishnu one of the trinity of supreme divinity in Hinduism. Puri is in the state of Odisha, on the eastern coast of India.",
+          "duration": "8 Days 7 Nights",
+          "price": "7999",
+          "img": "jagannath puri.jpeg",
+          "maploc": "https://www.google.com/maps/place/Shree+Jagannatha+Temple+Puri/@19.8049379,85.8153637,17z/data=!3m1!4b1!4m6!3m5!1s0x3a19c6b8bfe386af:0x8f052c84639c7d48!8m2!3d19.8049379!4d85.8179386!16zL20vMGN2eDd4"
+        },
+        {
+          "id": 16,
+          "place": "Chilika Lake",
+          "location": "Chilika, Orissa",
+          "description": "Chilika lake is one of the most attractive places in Orissa. This lake is the largest coastal lagoon in India and has been listed as a UNESCO World Heritage site.",
+          "duration": "11 Days 12 Nights",
+          "price": "11999",
+          "img": "chilika-lake.jpg",
+          "maploc": "https://www.google.com/maps/place/Chilika+Lake/@19.6873759,85.2138571,11z/data=!3m1!4b1!4m6!3m5!1s0x3a181f493428369b:0x8c7562c60bcda7a1!8m2!3d19.8449627!4d85.4788065!16zL20vMDRiMDF4"
+        }
+      ]
+    },
+    {
+      "title": "Central-India Packages",
+      "pack_id": 5,
+      "places": [
+        {
+          "id": 17,
+          "place": "Gwalior Fort",
+          "location": "Gwalior, Madhya Pradesh",
+          "description": "The Gwalior Fort commonly known as the Gwāliiyar Qila, is a hill fort near Gwalior, Madhya Pradesh, India. The fort has existed at least since the 10th century, and the inscriptions and monuments found within what is now the fort campus indicate that it may have existed as early as the beginning of the 6th century.",
+          "duration": "6 Days 5 Nights",
+          "price": "5999",
+          "img": "Gwalior fort.jpeg",
+          "maploc": "https://www.google.com/maps/place/Gwalior+Fort/@26.2313245,78.1669208,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c68ff0a2df73:0xebff42167ed98c34!8m2!3d26.2313245!4d78.1694957!16zL20vMGNwejF0"
+        },
+        {
+          "id": 18,
+          "place": "Kailash Temple",
+          "location": "Kailash Temple, Maharastra",
+          "description": "The Kailasha (IAST: Kailāśa) or Kailashanatha (IAST: Kailāśanātha) temple is the largest of the rock-cut Hindu temples at the Ellora Caves, Chhatrapati Sambhajinagar District, Maharashtra, India. A megalith carved from a rock cliff face, it is considered as one of the most remarkable cave temples in the world because of its size, architecture and sculptural treatment,and the climax of the rock-cut phase of Indian architecture.",
+          "duration": "7 Days 6 Nights",
+          "price": "10999",
+          "img": "kailash temple.png",
+          "maploc": "https://www.google.com/maps/place/Kailasa+Temple/@20.0239082,75.176761,17z/data=!3m1!4b1!4m6!3m5!1s0x3bdb925d7576f3e7:0xc53f42c5f6812405!8m2!3d20.0237503!4d75.1791233!16zL20vMDlrcndu"
+        },
+        {
+          "id": 19,
+          "place": "Golden Temple",
+          "location": "Golden Temple, Amritsar",
+          "description": "The Golden Temple also known as the Harmandir Sahib, lit.'abode of God', Punjabi pronunciation:the Darbār Sahib, 'exalted court', is a gurdwara located in the city of Amritsar, Punjab, India.It is the preeminent spiritual site of Sikhism. It is one of the holiest sites in Sikhism, alongside the Gurdwara Darbar Sahib Kartarpur in Kartarpur, and Gurdwara Janam Asthan in Nankana Sahib.",
+          "duration": "8 Days 7 Nights",
+          "price": "8899",
+          "img": "golden temple.jpeg",
+          "maploc": "https://www.google.com/maps/place/Golden+Temple,+Golden+Temple+Rd,+Atta+Mandi,+Katra+Ahluwalia,+Amritsar+Cantt.,+Punjab+143006/@31.6207087,74.8745191,17z/data=!3m1!4b1!4m6!3m5!1s0x39197ca90747169f:0x905b3bed34afb917!8m2!3d31.6207087!4d74.877094!16s%2Fg%2F11b776wlnd"
+        },
+        {
+          "id": 20,
+          "place": "Lal Chowk",
+          "location": "Lal Chowk, Kashmir",
+          "description": "Lal Chowk is a city square in Srinagar, Jammu and Kashmir, India. The square was given its name by left-wing activists who were inspired by the Russian Revolution as they fought the princely state's Maharaja, Hari Singh.",
+          "duration": "11 Days 12 Nights",
+          "price": "14999",
+          "img": "lal chowk.jpg",
+          "maploc": "https://www.google.com/maps/place/Lal+Chowk,+Srinagar+190001/@34.0701271,74.8070527,17z/data=!3m1!4b1!4m6!3m5!1s0x38e18f96b387110d:0x3f279be250eb08ff!8m2!3d34.0698315!4d74.8090391!16s%2Fg%2F1tjff6hc"
+        }
+      ]
+    }
+  ],
+  "booking": [
+    {
+      "Name": "jhulela pathan",
+      "Mail": "chakli@gmail.com",
+      "Phone": "4984156461",
+      "Date": "2023-05-19",
+      "Region": "2",
+      "Package": "Harihar",
+      "Kids": "1",
+      "Adults": "1",
+      "Seniors": "2",
+      "id": 1
+    },
+    {
+      "Name": "Moksha",
+      "Mail": "chakli5@gmail.com",
+      "Phone": "1234567890",
+      "Date": "2023-05-27",
+      "Region": "1",
+      "Package": "Kedarnath",
+      "Kids": "1",
+      "Adults": "2",
+      "Seniors": "2",
+      "id": 2
+    },
+    {
+      "Name": "Vasant Gawde",
+      "Mail": "abncd55@gmail.com",
+      "Phone": "4984156461",
+      "Date": "2023-05-17",
+      "Region": "4",
+      "Package": "Jagannath Puri",
+      "Kids": "2",
+      "Adults": "3",
+      "Seniors": "1",
+      "id": 3
+    },
+    {
+      "Name": "Mayur",
+      "Mail": "mayur54656@gmail.com",
+      "Phone": "6969696969",
+      "Date": "2023-05-09",
+      "Region": "5",
+      "Package": "Golden Temple",
+      "Kids": "3",
+      "Adults": "1",
+      "Seniors": "2",
+      "id": 4
+    },
+    {
+      "Name": "jhulela pathan",
+      "Mail": "chakli5@gmail.com",
+      "Phone": "4984156461",
+      "Date": "2023-05-26",
+      "Region": "",
+      "Package": "Devprayag",
+      "Kids": "2",
+      "Adults": "1",
+      "Seniors": "2",
+      "id": 5
+    },
+    {
+      "Name": "Kishor",
+      "Mail": "chakli@gmail.com",
+      "Phone": "9898256498",
+      "Date": "2023-06-02",
+      "Region": "3",
+      "Package": "Tirupati Balaji",
+      "Kids": "2",
+      "Adults": "2",
+      "Seniors": "3",
+      "id": 6
+    }
+  ],
+  "contact": [
+    {
+      "fname": "Sunny",
+      "lname": "Rajput",
+      "ename": "alalkk@g.com",
+      "pname": "98989898",
+      "something": "dddsssdd",
+      "id": 1
+    }
   ]
 }
-
