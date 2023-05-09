@@ -1,5 +1,6 @@
 import {React, useEffect,useState }from "react";
 import { Link } from "react-router-dom";
+import TypewriterComponent from "typewriter-effect";
 import "./Home.css";
 import binoculars from "../../assets/binoculars.png";
 import map_marker from "../../assets/map-marker.png";
@@ -33,6 +34,14 @@ const Home = (props) => {
           {/* =====Main Text===== */}
           <div>
             <p className="flex-shrink-1 saf-1">YOUR सFAR STARTS HERE...</p>
+            {/* <p className="flex-shrink-1 saf-1"><TypewriterComponent 
+            options={{
+              autoStart: true,
+              loop:true,
+              delay:50,
+              strings:["YOUR सFAR STARTS HERE..."]
+            }}/></p> */}
+
           </div>
 
           <div className="pt-5 ">
