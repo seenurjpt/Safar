@@ -126,7 +126,7 @@
 
 
 /* necessary to give position: relative to parent. */
-input[type="text"] {
+.ola > input[type="text"] {
   font: 15px/24px;
   color: var(--primary-shades);
   width: 100%;
@@ -137,6 +137,7 @@ input[type="text"] {
 .effect {
   border: 0;
   padding: 7px 0;
+  color: var(--primary-shades);
   border-bottom: 1px solid var(--primary-shades);
 }
 
