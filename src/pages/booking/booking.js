@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import "../booking/booking.css";
+import Payment from "../../components/common/paymentgateway/Payment";
 
 const Booking = () => {
   const [val, setVal] = useState({
@@ -40,6 +41,7 @@ const Booking = () => {
     getApi1();
   }, []);
 
+
   const handleReg = (e) => {
     const getregId = e.target.value;
     const getPlacedata = data.find(
@@ -54,6 +56,7 @@ const Booking = () => {
     setPlaceid(packId);
   };
 
+
   const handleChange = (e) => {
     setVal({ ...val, [e.target.name]: e.target.value });
     setPop({...val, [e.target.name]: e.target.value})
@@ -61,8 +64,6 @@ const Booking = () => {
 
   const handleSubmit = () => {
     axios.post("http://localhost:3004/booking", val).then((result) => {
-      console.log("abcdefg", result);
-
     });
      setVal({   Name: "",
      Mail: "",
@@ -89,7 +90,7 @@ const Booking = () => {
             <p className="card-title text-center shadow mt-5 rounded-2">
               Travel Booking Form
             </p>
-
+          
             <div className="icons text-center">
               <i className="fa fa-bus fa-2x faa" aria-hidden="true"></i>
               <i className="fa fa-campground fa-2x faa" aria-hidden="true"></i>
@@ -206,7 +207,7 @@ const Booking = () => {
                     Packages
                   </option>
                   {place.map((pl, index) => (
-                    <option value={pl.place} key={index}>
+                    <option value={pl.place} key={index} >
                       {pl.place}
                     </option>
                   ))}
@@ -271,9 +272,37 @@ const Booking = () => {
                   <option value="3">3</option>
                 </select>
               </div>
+
+              <div className="row pt-2">
+                <div className="col-sm-3">
+                  <input
+                    placeholder="Add Passenger"
+                    type="text"
+                    id="date-picker-example"
+                    className="form-control "
+                    name="Name"
+                    required
+                  />
+                </div>
+
+                <div className="col-sm-3 py-2" style={{marginLeft:"-1.5rem"}}>
+                  <i class="bi bi-plus-circle  " ></i>
+                </div>
+
+                <div className="col-sm-6 d-flex">
+                  <label className="">Upload Document  :    <label></label></label>
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
+                    required
+                  />
+                </div>
+              </div>
+              
             </div>
             <div className="col-sm-2">
-              <p>{}</p>
             </div>
             <input className="btn float-left " id="book-btn" type="reset" />
             <button
@@ -287,11 +316,8 @@ const Booking = () => {
               Submit
             </button>
 
-         {
-
-         }
             <div
-              class="modal fade"
+              class="modal fade"  
               id="exampleModal"
               tabindex="-1"
               aria-labelledby="exampleModalLabel"
@@ -337,6 +363,7 @@ const Booking = () => {
                     >
                       Close
                     </button>
+                    <Payment  />
                   </div>
                 </div>
               </div>

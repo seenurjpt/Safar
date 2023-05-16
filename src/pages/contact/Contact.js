@@ -5,14 +5,49 @@ import bannerco from "../../assets/contact-banner.jpg";
 
 const Contact = () => {
   const [val, setVal] = useState()
+  const [snd, setSnd] = useState()
   const handleChange = (e) => {
     setVal({ ...val, [e.target.name]: e.target.value });
-    console.log("test", val)
+    setSnd({ ...snd, [e.target.name]: e.target.value });
+    
   };
 
-  const handleSubmit = () => {
-    axios.post("http://localhost:3004/contact", val).then((result) => {
+  const handleSubmit = (event) => {
+
+    // axios.post("http://localhost:3004/contact", val).then((result) => {
+    // });
+
+    var axios = require('axios');
+    var data = JSON.stringify({
+        "collection": "<COLLECTION_NAME>",
+        "database": "<DATABASE_NAME>",
+        "dataSource": "Cluster0",
+        "projection": {
+            "_id": 1,
+            "name":snd.fname,
+            "message":snd.ename
+        }
     });
+                
+    var config = {
+        method: 'post',
+        url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-btyms/endpoint/data/v1/action/findOne',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Request-Headers': '*',
+          'api-key': 'uIMvndnoaxtRDwYtRg9RjssNY8BF6tCVp0eYbF5QhhwWF4VOxONNAabfOrUiRNpY',
+        },
+        data: data
+    };
+                
+    axios(config)
+        .then(function (response) {
+            console.log(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    
   };
   return (
     <>
@@ -95,7 +130,7 @@ const Contact = () => {
                       id="ename"
                       name="ename"
                       class="effect"
-                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                       onChange={(e) => handleChange(e)}
                       required
                     />

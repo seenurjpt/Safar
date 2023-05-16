@@ -1,10 +1,11 @@
-import { React, useState,useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import axios from "axios";
 import "../booking/booking.css";
 import { useLocation } from "react-router-dom";
+import Payment from "../../components/common/paymentgateway/Payment";
 
 const BookPackage = () => {
-  const location= useLocation()
+  const location = useLocation();
   const [data1, setData1] = useState([]);
   const getApi1 = () => {
     axios.get("http://localhost:3004/booking").then((result1) => {
@@ -26,6 +27,7 @@ const BookPackage = () => {
     Adults: "",
     Seniors: "",
   });
+  const [pop, setPop] = useState({});
 
   const currentDate = new Date().toISOString().split("T")[0];
   // const [placeid, setPlaceid] = useState("");
@@ -62,21 +64,32 @@ const BookPackage = () => {
   // };
 
   const handleChange = (e) => {
-    setVal({ ...val, [e.target.name]: e.target.value, Package:location.state.pack});
+    setVal({
+      ...val,
+      [e.target.name]: e.target.value,
+      Package: location.state.pack,
+    });
+    setPop({
+      ...val,
+      [e.target.name]: e.target.value,
+      Package: location.state.pack,
+    });
   };
   // const newData = {...val, Package:location.state.pack}
 
   const handleSubmit = () => {
     axios.post("http://localhost:3004/booking", val).then((result) => {});
-     setVal({   Name: "",
-     Mail: "",
-     Phone: "",
-     Date: "",
-     Region: "",
-     Package: "",
-     Kids: "",
-     Adults: "",
-     Seniors: "",})
+    setVal({
+      Name: "",
+      Mail: "",
+      Phone: "",
+      Date: "",
+      Region: "",
+      Package: "",
+      Kids: "",
+      Adults: "",
+      Seniors: "",
+    });
   };
 
   return (
@@ -141,6 +154,7 @@ const BookPackage = () => {
                 <input
                   placeholder="Phone Number (e.g. 1234567890)"
                   type="tel"
+                  maxLength={10}
                   id="date-picker-example"
                   className="form-control pb-2"
                   name="Phone"
@@ -225,6 +239,35 @@ const BookPackage = () => {
                   <option value="3">3</option>
                 </select>
               </div>
+
+              <div className="row pt-2">
+                <div className="col-sm-3">
+                  <input
+                    placeholder="Add Passenger"
+                    type="text"
+                    id="date-picker-example"
+                    className="form-control "
+                    name="Name"
+                    required
+                  />
+                </div>
+
+                <div className="col-sm-3 py-2" style={{marginLeft:"-1.5rem"}}>
+                  <i class="bi bi-plus-circle  " ></i>
+                </div>
+
+                <div className="col-sm-6 d-flex">
+                  <label className="">Upload Document  :    <label></label></label>
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
+                    required
+                  />
+                </div>
+              </div>
+              
             </div>
             <div className="col-sm-2">
               <p>{}</p>
@@ -257,18 +300,21 @@ const BookPackage = () => {
                     <button
                       type="button"
                       class="btn-close"
-                      // data-bs-dismiss="modal"
-                      // aria-label="Close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
                     ></button>
                   </div>
 
                   <div class="modal-body">
-                    <p>Name : {data1[data1.length - 1]?.Name}</p>
-                    <p>Package : {data1[data1.length - 1]?.Package}</p>
-                    <p>Date: {data1[data1.length - 1]?.Date}</p>
-                    <p>
-                      Number of persons : {data1[data1.length - 1]?.Persons}
-                    </p>
+                    <p>Name : {pop?.Name}</p>
+                    <p>Package : {pop?.Package}</p>
+                    <p>Date: {pop?.Date}</p>
+
+                    <div className="d-flex gap-3">
+                      <p>Kids : {pop?.Kids}</p>
+                      <p>Adults: {pop?.Adults}</p>
+                      <p>Seniors : {pop?.Seniors}</p>
+                    </div>
                   </div>
 
                   <div class="modal-footer">
@@ -279,11 +325,8 @@ const BookPackage = () => {
                     >
                       Close
                     </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
-                    </button>
+                    <Payment />
                   </div>
-                  
                 </div>
               </div>
             </div>

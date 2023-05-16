@@ -13,6 +13,8 @@ import Login from "./pages/login/Login";
 import Admin from "./pages/admin/admin";
 import Toggle from "./components/toggle/Toggle";
 import BookPackage from "./pages/booking/bookdetails";
+import Feedback from "./pages/admin/Feedback";
+import Payment from "./components/common/paymentgateway/Payment";
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="admin" element={<Admin />} />
         <Route path="bookpackage" element={<BookPackage />} />
+        <Route path="feedback" element={<Feedback />} />
+        <Route path="payment" element={<Payment />} />
       </Routes>
 
       <Footer />
