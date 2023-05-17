@@ -1,46 +1,83 @@
 import { React, useEffect, useState } from "react";
 import "./admin.css";
-import axios from "axios";
+import axios, { Axios } from "axios";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import AddPackage from "../../components/common/AddPackage";
 
 const Admin = () => {
+  // const [data, setData] = useState([]);
+  // const [user, setUser] = useState([]);
+  // const getApi = () => {
+  //   axios.get("http://localhost:3004/booking").then((result) => {
+  //     setData(result.data);
+  //   });
+  // };
+  // const getApi2 = () => {
+  //   axios.get("http://localhost:3004/users").then((result1) => {
+  //     setUser(result1.data);
+  //     console.log("lololo", result1.data);
+  //   });
+  // };
   const [data, setData] = useState([]);
-  const [user, setUser] = useState([]);
-  const getApi = () => {
-    axios.get("http://localhost:3004/booking").then((result) => {
-      setData(result.data);
-    });
+  const fetchHomePageData = () => {
+    axios
+      .get("http://localhost:1337/admin/dashboard")
+      .then((res) => {
+        setData(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  const getApi2 = () => {
-    axios.get( "http://localhost:3004/users").then((result1) => {
-      setUser(result1.data);
-      console.log("lololo", result1.data)
-    });
+
+  const handlePlaceEdit = (id) => {
+    axios
+      .put(`http://localhost:1337/api/places/${id}`, {})
+      .then((res) => {
+        console.log("====================================");
+        console.log(res.data);
+        console.log("====================================");
+        fetchHomePageData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const handleDeletePlace = (id) => {
+    axios
+      .delete(`http://localhost:1337/api/places/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        fetchHomePageData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
-    getApi();
-    getApi2();
+    fetchHomePageData();
   }, []);
 
-  const removeId = async (id) => {
-    await axios.delete(`http://localhost:3004/booking/${id}`);
-    getApi();
-  };
+  // const removeId = async (id) => {
+  //   await axios.delete(`http://localhost:3004/booking/${id}`);
+  //   getApi();
+  // };
   return (
     <>
       <div className="px-3 background-color">
         <div className="container-fluid">
-        <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/feedback">
-      Feedback Page
-    </a>
-  </div>
-</nav>
-          <div className="row g-3 py-5">
+          <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/feedback">
+                Feedback Page
+              </a>
+              <AddPackage fetchHomePageData={fetchHomePageData} />
+            </div>
+          </nav>
+          {/* <div className="row g-3 py-5">
             <div className="col-md p-3">
-        
               <div className="p-3 bg-white shadow-sm  d-flex justify-content-around align-item-center rounded ">
                 <div>
                   <h3 className="fs-2 mt-3">{Object.keys(user).length}</h3>
@@ -60,62 +97,53 @@ const Admin = () => {
               </div>
             </div>
 
+          </div> */}
+          {data.Places && (
             <table class="table caption-top bg-white rounded">
-              {/* <caption className='text-white fs-2'> Recent data</caption> */}
               <thead>
                 <tr>
                   <th scope="col">No.</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Phone</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Package</th>
+                  <th scope="col">place name</th>
+                  <th scope="col">price</th>
+                  <th scope="col">localtion</th>
+                  <th scope="col">image</th>
                   <th scope="col">Presons</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                {data.map((user, index) => (
-                  <>
-                    <tr>
-                      <th scope="row">{index+1}</th>
-                      <td>{user.Name}</td>
-                      <td>+91 {user.Phone}</td>
-                      <td>{user.Date}</td>
-                      <td>{user.Package}</td>
-                      <td>{Number(user.Kids )+ Number(user.Adults) + Number(user.Seniors)}</td>
-                      <td>
-                        <button
-                          type="button"
-                          className="btn btn-danger dlt-btn"
-                          onClick={() => removeId(user.id)}
-                        >
-                          <ion-icon name="close"></ion-icon>
-                        </button>
-                      </td>
-                    </tr>
-                  </>
+                {data.Places.map((user, index) => (
+                  <tr>
+                    {console.log(user)}
+                    <td scope="row">{index + 1}</td>
+                    <td>{user.place}</td>
+                    <td>{user.price}</td>
+                    <td>{user.maplocation}</td>
+                    <td>
+                      <img src={user.image} width="100px" height="100px" />
+                    </td>
+                    <td>{user.description}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className="btn btn-danger dlt-btn"
+                        onClick={() => handleDeletePlace(user.id)}
+                      >
+                        <ion-icon name="close"></ion-icon>
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-primary dlt-btn"
+                        onClick={() => handlePlaceEdit(user.id)}
+                      >
+                        update
+                      </button>
+                    </td>
+                  </tr>
                 ))}
-
-                {/* <tr>
-      <th scope="row">1</th>
-      <td>kimi</td>
-      <td>998988345</td>
-      <td>2/5/23</td>
-      <td>kedarnath</td>
-      <td>3</td>
-    </tr>
-
-    <tr>
-      <th scope="row">1</th>
-      <td>Mayur</td>
-      <td>56563423</td>
-      <td>6/5/23</td>
-      <td>nalsarover</td>
-      <td>4</td>
-    </tr>
-     */}
               </tbody>
             </table>
-          </div>
+          )}
         </div>
       </div>
     </>
