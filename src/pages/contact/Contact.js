@@ -31,7 +31,7 @@ const Contact = () => {
                 
     var config = {
         method: 'post',
-        url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-btyms/endpoint/data/v1/action/findOne',
+        url: 'http://localhost:1337/api/contactus',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Request-Headers': '*',

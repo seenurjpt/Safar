@@ -83,13 +83,23 @@ const Admin = () => {
                       <td>{user.Package}</td>
                       <td>{Number(user.Kids )+ Number(user.Adults) + Number(user.Seniors)}</td>
                       <td>
+                      <button
+                          type="button"
+                          className="btn btn-success dlt-btn mx-2"
+                          // onClick={() => removeId(user.id)}
+                        >
+                          {/* <ion-icon name="close"></ion-icon> */}
+                          <ion-icon name="pencil"></ion-icon>
+                        </button>
                         <button
                           type="button"
                           className="btn btn-danger dlt-btn"
                           onClick={() => removeId(user.id)}
                         >
                           <ion-icon name="close"></ion-icon>
+                          {/* <ion-icon name="pencil"></ion-icon> */}
                         </button>
+                      
                       </td>
                     </tr>
                   </>

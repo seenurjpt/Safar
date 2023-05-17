@@ -75,16 +75,16 @@ function Header() {
                   Contact Us
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink to="/login" activeClassName="active">
                   Login
                 </NavLink>
-              </li>
-              {/* <li className="nav-item">
+              </li> */}
+              <li className="nav-item">
                 <NavLink to="/login" activeClassName="active">
                 <img class="rounded-circle" width="30px" src={userPro} />
                 </NavLink>
-              </li> */}
+              </li>
 
               {/* {isAuthenticated ? (
                 <li className="nav-item">
