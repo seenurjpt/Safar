@@ -4,7 +4,7 @@ import "./Contact.css";
 import bannerco from "../../assets/contact-banner.jpg";
 
 const Contact = () => {
-  const [val, setVal] = useState()
+  const [val, setVal] = useState({})
   const [snd, setSnd] = useState()
   const handleChange = (e) => {
     setVal({ ...val, [e.target.name]: e.target.value });
@@ -12,43 +12,26 @@ const Contact = () => {
     
   };
 
-  const handleSubmit = (event) => {
+  // const handleSubmit = () => {
 
     // axios.post("http://localhost:3004/contact", val).then((result) => {
     // });
 
-    var axios = require('axios');
-    var data = JSON.stringify({
-        "collection": "<COLLECTION_NAME>",
-        "database": "<DATABASE_NAME>",
-        "dataSource": "Cluster0",
-        "projection": {
-            "_id": 1,
-            "name":snd.fname,
-            "message":snd.ename
-        }
-    });
-                
-    var config = {
-        method: 'post',
-        url: 'http://localhost:1337/api/contactus',
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Request-Headers': '*',
-          'api-key': 'uIMvndnoaxtRDwYtRg9RjssNY8BF6tCVp0eYbF5QhhwWF4VOxONNAabfOrUiRNpY',
-        },
-        data: data
+    const handleSubmit = async () => {
+      try {
+        const response = await axios.post(
+          "http://localhost:1337/api/contactus",
+          val
+        );
+        console.log(response);
+        setVal({});
+        window.location.href = "/home";
+      } catch (error) {
+        console.log(error);
+      }
     };
-                
-    axios(config)
-        .then(function (response) {
-            console.log(JSON.stringify(response.data));
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-    
-  };
+  
+  // };
   return (
     <>
       <div class="contact-banner">
@@ -109,14 +92,14 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div class="d-flex gap-5 w-100 py-sm-3">
                   <div>
-                    <label for="fname"><p>First name:</p></label>
+                    <label for="firstname"><p>First name:</p></label>
                     <br />
-                    <input type="text" id="fname" name="fname" class="effect" onChange={(e) => handleChange(e)} required/>
+                    <input type="text" id="fname" name="firstName" class="effect" onChange={(e) => handleChange(e)} required/>
                     <br />
                   </div>
                   <div>
-                    <label for="lname"><p>Last name:</p></label> <br />
-                    <input type="text" id="lname" name="lname" class="effect" onChange={(e) => handleChange(e)} required/>
+                    <label for="lastname"><p>Last name:</p></label> <br />
+                    <input type="text" id="lname" name="lastName" class="effect" onChange={(e) => handleChange(e)} required/>
                     <br />
                   </div>
                 </div>
@@ -128,7 +111,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="ename"
-                      name="ename"
+                      name="email"
                       class="effect"
                       // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                       onChange={(e) => handleChange(e)}
@@ -142,7 +125,7 @@ const Contact = () => {
                     <input
                       type="tel"
                       id="pname"
-                      name="pname"
+                      name="phone"
                       class="effect"
                       pattern="[0-9]{10}"
                       onChange={(e) => handleChange(e)}
@@ -155,7 +138,7 @@ const Contact = () => {
                   <label for="lname"><p>Write something here...</p></label>
                   <br />
                   <textarea
-                    name="something"
+                    name="message"
                     id=""
                     cols="55"
                     rows="2"
