@@ -137,6 +137,7 @@ input[type="text"] {
 .effect {
   border: 0;
   padding: 7px 0;
+  color: var(--primary-shades);
   border-bottom: 1px solid var(--primary-shades);
 }
 

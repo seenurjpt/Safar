@@ -1,14 +1,23 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../packages/Packages.css";
 import bannerpack from "../../assets/packages_images/packages banner.jpg";
 
 const Packages = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
+
+  const handleBook = (data) => {
+    navigate("/bookpackage", {
+      state: {
+        pack: data?.place,
+      },
+    });
+  };
+
   const getApi = () => {
     axios.get("http://localhost:3004/packages").then((result) => {
-      console.log("console_data", result);
       setData(result.data);
     });
   };
@@ -36,36 +45,36 @@ const Packages = () => {
         </div>
       </div>
 
+
       <div className="wholee">
+        
         {data.map((item) => {
           return (
             <div className="boss">
+              
               <div className="rol">
                 <article className="tx">
                   <p>{item.title}:</p>
                 </article>
                 <div className="pack_imag">
-                  {item?.places.map((el, i) => {
+                  {item?.places.map((el) => {
                     return (
                       <>
                         <a
-                          href=""
                           data-bs-target={`#${el.place}`}
                           data-bs-toggle="modal"
                         >
                           <img className="imag" src={IMG(el.img)} alt="" />
                         </a>
                         <div className="modal fade" id={el.place} tabIndex="-1">
-                          <div className="modal-dialog">
+                          <div className="modal-dialog modal-dialog-centered">
                             <div className="modal-content">
                               <div className="modal-header">
                                 <div>
                                   <h1 className="modal-title fs-1">
                                     {el.place}
                                   </h1>
-                                  <a href="https://goo.gl/maps/FwS7zCe71dY9zYeWA">
-                                    📍{el.location}
-                                  </a>
+                                  <a href={el.maploc}>📍{el.location}</a>
                                 </div>
                                 <button
                                   type="button"
@@ -99,12 +108,11 @@ const Packages = () => {
                                 <button
                                   type="button"
                                   className="btn btn-primary"
+                                  onClick={() => handleBook(el)}
                                   data-bs-target="#appoint"
                                   data-bs-dismiss="modal"
                                 >
-                                  <Link className="booking_link" to="/booking">
-                                    Book
-                                  </Link>
+                                  Book
                                 </button>
                               </div>
                             </div>

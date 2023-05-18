@@ -33,6 +33,14 @@ const Home = (props) => {
           {/* =====Main Text===== */}
           <div>
             <p className="flex-shrink-1 saf-1">YOUR सFAR STARTS HERE...</p>
+            {/* <p className="flex-shrink-1 saf-1"><TypewriterComponent 
+            options={{
+              autoStart: true,
+              loop:true,
+              delay:50,
+              strings:["YOUR सFAR STARTS HERE..."]
+            }}/></p> */}
+
           </div>
 
           <div className="pt-5 ">

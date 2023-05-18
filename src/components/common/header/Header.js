@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import userPro from "../../../assets/clipart546487.png"
 import "../header/Header1.css";
 
 function Header() {
@@ -76,7 +77,7 @@ function Header() {
               </li>
               <li className="nav-item">
                 <NavLink to="/login" activeClassName="active">
-                  Login
+                <img class="rounded-circle" width="30px" src={userPro} />
                 </NavLink>
               </li>
 

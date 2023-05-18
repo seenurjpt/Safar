@@ -1,60 +1,48 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
-import PackagesData from "../../Packages.json";
 import "../booking/booking.css";
 
 const Booking = () => {
-  const [val, setVal] = useState();
+  const [val, setVal] = useState({
+    Name: "",
+    Mail: "",
+    Phone: "",
+    Date: "",
+    Region: "",
+    Package: "",
+    Kids: "",
+    Adults: "",
+    Seniors: "",
+  });
+  const [pop, setPop] = useState({})
+
   const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
 
   const [regionid, setRegionid] = useState("");
   const [placeid, setPlaceid] = useState("");
   const [place, setPlace] = useState([]);
+  const currentDate = new Date().toISOString().split("T")[0];
 
   const getApi = () => {
     axios.get("http://localhost:3004/packages").then((result) => {
       setData(result.data);
     });
   };
+  const getApi1 = () => {
+    axios.get("http://localhost:3004/booking").then((result1) => {
+      setData1(result1.data);
+    });
+  };
 
   useEffect(() => {
     getApi();
+    getApi1();
   }, []);
-
-  const mailregex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-  const phoneregex = /^[7-9][0-8]{9}$/;
-  const currentDate = new Date().toISOString().split("T")[0];
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [mailerror, setMailerror] = useState("");
-  const [phoneerror, setPhoneerror] = useState("");
-  const validEmail = mailregex.test(email);
-  const validPhone = phoneregex.test(phone);
-
-  const checkEmail = (e) => {
-    setEmail(e.target.value);
-
-    if (validEmail === false) {
-      setMailerror("Please, Enter Valid Email");
-    } else {
-      setMailerror(" ");
-      return true;
-    }
-  };
-  const checkPhone = (e) => {
-    setPhone(e.target.value);
-
-    if (validPhone === false) {
-      setPhoneerror("Please, Enter Valid Phone");
-    } else {
-      setPhoneerror(" ");
-      return true;
-    }
-  };
 
   const handleReg = (e) => {
     const getregId = e.target.value;
-    const getPlacedata = PackagesData.find(
+    const getPlacedata = data.find(
       (region) => region.pack_id == getregId
     )?.places;
     setPlace(getPlacedata);
@@ -68,25 +56,34 @@ const Booking = () => {
 
   const handleChange = (e) => {
     setVal({ ...val, [e.target.name]: e.target.value });
+    setPop({...val, [e.target.name]: e.target.value})
   };
 
-  const pop = (e) => {
-    if (validEmail === true && validPhone === true) {
-      handleSubmit();
-    } else {
-      alert("Please Fill Valid Details");
-      e.preventDefault();
-    }
-  };
   const handleSubmit = () => {
     axios.post("http://localhost:3004/booking", val).then((result) => {
-      console.log("oggy", result);
+      console.log("abcdefg", result);
+
     });
+     setVal({   Name: "",
+     Mail: "",
+     Phone: "",
+     Date: "",
+     Region: "",
+     Package: "",
+     Kids: "",
+     Adults: "",
+     Seniors: "",})
   };
 
   return (
     <div className="background-color">
-      <form className="py-5 border-top border-dark" onSubmit={pop}>
+      <form
+        className="py-5 border-top border-dark"
+        onSubmit={(e) => {
+          handleSubmit(e);
+          e.preventDefault();
+        }}
+      >
         <div className="card shadow  bg-white  rounded-5">
           <div className="card-body rounded-3 ">
             <p className="card-title text-center shadow mt-5 rounded-2">
@@ -112,43 +109,46 @@ const Booking = () => {
                   id="date-picker-example"
                   className="form-control "
                   name="Name"
+                  value={val?.Name}
                   onChange={(e) => handleChange(e)}
                   required
                 />
               </div>
+              {console.log("pop", pop)}
 
               <div className="col-sm-6">
                 <input
-                  placeholder="E-mail"
-                  type="text"
+                  placeholder="E-mail (e.g. emaple@gmail.com)"
+                  type="email"
                   id="date-picker-example"
                   className="form-control"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                   name="Mail"
+                  value={val?.Mail}
                   onChange={(e) => {
                     handleChange(e);
-                    checkEmail(e);
                   }}
                   required
                 />
-                <p className="text-danger">{mailerror}</p>
               </div>
             </div>
 
             <div className="row pt-4">
               <div className="col-sm-6">
                 <input
-                  placeholder="Phone Number"
-                  type=""
+                  placeholder="Phone Number (e.g. 1234567890)"
+                  type="tel"
+                  maxLength={10}
                   id="date-picker-example"
                   className="form-control pb-2"
                   name="Phone"
+                  value={val?.Phone}
+                  pattern="[0-9]{10}"
                   onChange={(e) => {
                     handleChange(e);
-                    checkPhone(e);
                   }}
                   required
                 />
-                <p className="text-danger">{phoneerror}</p>
               </div>
 
               <div className="col-sm-6">
@@ -159,6 +159,7 @@ const Booking = () => {
                   min={currentDate}
                   className="form-control datepicker"
                   name="Date"
+                  value={val?.Date}
                   onChange={(e) => handleChange(e)}
                   required
                 />
@@ -171,6 +172,7 @@ const Booking = () => {
                   className="browser-default custom-select pb-p"
                   id="select"
                   name="Region"
+                  value={val?.Region}
                   onChange={(e) => {
                     handleChange(e);
                     handleReg(e);
@@ -180,7 +182,7 @@ const Booking = () => {
                   <option disabled="" selected="">
                     Select Region
                   </option>
-                  {PackagesData.map((option, index) => (
+                  {data.map((option, index) => (
                     <option key={index} value={option.pack_id}>
                       {option.title}
                     </option>
@@ -193,6 +195,7 @@ const Booking = () => {
                   className="browser-default custom-select mb-4"
                   id="select"
                   name="Package"
+                  value={val?.Package}
                   onChange={(e) => {
                     handleChange(e);
                     handlePack(e);
@@ -217,6 +220,7 @@ const Booking = () => {
                   className="browser-default custom-select mb-4"
                   id="select"
                   name="Kids"
+                  value={val?.Kids}
                   onChange={(e) => handleChange(e)}
                   required
                 >
@@ -235,6 +239,7 @@ const Booking = () => {
                   className="browser-default custom-select mb-4"
                   id="select"
                   name="Adults"
+                  value={val?.Adults}
                   onChange={(e) => handleChange(e)}
                   required
                 >
@@ -253,6 +258,7 @@ const Booking = () => {
                   className="browser-default custom-select mb-4"
                   id="select"
                   name="Seniors"
+                  value={val?.Seniors}
                   onChange={(e) => handleChange(e)}
                   required
                 >
@@ -271,36 +277,70 @@ const Booking = () => {
             </div>
             <input className="btn float-left " id="book-btn" type="reset" />
             <button
-              className="btn float-right"
+              className="btn float-right "
               id="book-btn"
               type="submit"
               value="Book"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
             >
               Submit
             </button>
 
-            {/* <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+         {
 
+         }
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Booking Details
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> */}
+                  <div class="modal-body">
+                    <p>Name : {pop?.Name}</p> 
+                    <p>Package : {pop?.Package}</p> 
+                    <p>Date: {pop?.Date}</p>
+                    
+              <div className="d-flex gap-3">
+              <p>
+                      Kids : {pop?.Kids}
+                    </p>
+                    <p>
+                      Adults: {pop?.Adults}
+                    </p>
+                    <p>
+                      Seniors : {pop?.Seniors}
+                    </p>
+              </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </form>

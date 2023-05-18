@@ -32,7 +32,7 @@ const Admin = () => {
       <div className="px-3 background-color">
         <div className="container-fluid">
           <div className="row g-3 py-5">
-            <div className="col-md p-3">
+            {/* <div className="col-md p-3">
               <div className="p-3 bg-white shadow-sm  d-flex justify-content-around align-item-center rounded ">
                 <div>
                   <h3 className="fs-2 pt-3">450</h3>
@@ -40,7 +40,7 @@ const Admin = () => {
                 </div>
                 <i class="bi bi-people p-3 fs-1"></i>
               </div>
-            </div>
+            </div> */}
 
             <div className="col-md p-3">
               <div className="p-3 bg-white shadow-sm  d-flex justify-content-around align-item-center rounded ">
@@ -75,10 +75,10 @@ const Admin = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.map((user) => (
+                {data.map((user, index) => (
                   <>
                     <tr>
-                      <th scope="row">{user.id}</th>
+                      <th scope="row">{index+1}</th>
                       <td>{user.Name}</td>
                       <td>+91 {user.Phone}</td>
                       <td>{user.Date}</td>
