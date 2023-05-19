@@ -373,21 +373,5 @@
       "id": 1
     }
   ],
-  "ratings": [
-    {
-      "feedback": "hello,your web-app is good !!!",
-      "Star": 5,
-      "id": 1
-    },
-    {
-      "feedback": "po",
-      "Star": 3,
-      "id": 3
-    },
-    {
-      "feedback": "kode",
-      "Star": 2,
-      "id": 4
-    }
-  ]
+  "ratings": []
 }
