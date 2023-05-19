@@ -1,15 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import {React,useState} from 'react'
+import axios from 'axios'
+import "./star.css"
 import { FaStar } from "react-icons/fa";
-import "./star.css";
-import axios from "axios";
+import badrinath from "../../assets/packages_images/badrinath.jpeg"
 
 const colors = {
   orange: "#FFBA5A",
   grey: "#a9a9a9",
 };
 
-function Star() {
+const Star = () => {
   const stars = Array(5).fill(0);
   const [currentValue, setCurrentValue] = useState(0);
   const [hoverValue, setHoverValue] = useState(undefined);
@@ -27,7 +27,7 @@ function Star() {
     setHoverValue(undefined);
   };
   const handleChange = (e) => {
-    setVal({ ...val, [e.target.name]: e.target.value });
+    setVal({ ...star, [e.target.name]: e.target.value });
   };
   const handleStar = (index) => {
     setStar({ ...val, Star: index + 1 });
@@ -52,26 +52,21 @@ function Star() {
   };
 
   const handleSubmit = () => {
-    axios.post("http://localhost:3004/ratings", star).then((result) => {});
+    axios.post("http://localhost:3004/ratings", val).then((result) => {});
   };
-
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className="container">
-          <h1>Star Rating in React</h1>
-        </div>
+  <div>
+    
+    <h1>Review your trip !!</h1>
+<div class="base">
+<form onSubmit={handleSubmit}>
+    <div class="card rounded-5" style={{ width:" 20rem"}}>
+        <img src= {badrinath} class="card-img-top p-3 rounded-5" alt="..."/>
+        <div class="card-body">
+        <h5 class="card-title">Badrinath</h5>
 
-        <div className="star">
-          <textarea
-            className="textarea"
-            placeholder="What's your experience?"
-            name="feedback"
-            onChange={(e) => handleChange(e)}
-          />
-          <h2> {cap}</h2>
-          <div>
-            {stars.map((_, index) => {
+        <h3> {cap}</h3>
+          {stars.map((_, index) => {
               return (
                 <>
                   <FaStar
@@ -96,46 +91,20 @@ function Star() {
                 </>
               );
             })}
-            <button
-              className="button btn btn-primary"
-              type="submit"
-              // style={style.button}
-            >
-              Submit
-            </button>
-          </div>
+        <br/>
+        <div class="mb-3">
+        <label for="" class="form-label"></label>
+        <textarea class="form-control" name="feedback" id="" rows="3"  onChange={(e) => handleChange(e)}/>
         </div>
-      </form>
+        <button  class="btn btn-primary" type="submit">Submit</button>
+        </div>
     </div>
-  );
+    </form>
+</div>  
+
+</div>
+    
+  )
 }
 
-// const style ={
-//     container: {
-//         display: "flex",
-//         flexDirection:"column",
-//         alignITEM:"center",
-//     },
-//     stars: {
-//         display: "flex",
-//         flexDirection: "row",
-//       },
-//       textarea: {
-
-//         border: "1px solid #a9a9a9",
-//         borderRadius: 5,
-//         padding: 10,
-//         margin: "20px 0",
-//         minHeight: 100,
-//         width: 300
-//       },
-//       button: {
-//         border: "1px solid #a9a9a9",
-//         borderRadius: 5,
-//         width: 300,
-//         padding: 10,
-//       }
-
-// }
-
-export default Star;
+export default Star

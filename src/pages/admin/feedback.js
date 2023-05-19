@@ -73,9 +73,9 @@ const Feedback = () => {
                   <>
                     <tr>
                       <th scope="row">{index+1}</th>
-                      {/* <td>{user.Star}   </td> */}
+                     
+                     <td>{user.Star} Star</td>
                       {/* <td>{golu}</td> */}
-                    
                       <td>{user.feedback}</td>
                       <td>
                       {/* ⭐⭐⭐⭐⭐ */}

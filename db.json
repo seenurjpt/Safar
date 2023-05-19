@@ -375,19 +375,14 @@
   ],
   "ratings": [
     {
-      "feedback": "hello,your web-app is good !!!",
-      "Star": 5,
+      "Star": 4,
+      "feedback": "moksha",
       "id": 1
     },
     {
-      "feedback": "po",
-      "Star": 3,
+      "Star": 5,
+      "feedback": "good",
       "id": 3
-    },
-    {
-      "feedback": "kode",
-      "Star": 2,
-      "id": 4
     }
   ]
 }
