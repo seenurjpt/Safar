@@ -5,16 +5,13 @@ label {
   margin: 0;
   padding: 0;
 }
-body {
-  margin: 20px;
-    /* background-image: url(../../assets/review-background.jpg); */
-}
+
 .base{
     margin-top: 30px;
     display: flex;
     justify-content: center;
 }
-h1 {
+.okokok h1 {
    
   font-size: 1.5em;
   margin: 10px;

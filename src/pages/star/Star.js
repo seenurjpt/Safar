@@ -55,7 +55,7 @@ const Star = () => {
     axios.post("http://localhost:3004/ratings", val).then((result) => {});
   };
   return (
-  <div>
+  <div className='okokok'>
     
     <h1>Review your trip !!</h1>
 <div class="base">
