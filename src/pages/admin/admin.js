@@ -31,18 +31,16 @@ const Admin = () => {
     <>
       <div className="px-3 background-color">
         <div className="container-fluid">
+        <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/feedback">
+      Feedback Page
+    </a>
+  </div>
+</nav>
           <div className="row g-3 py-5">
-            {/* <div className="col-md p-3">
-              <div className="p-3 bg-white shadow-sm  d-flex justify-content-around align-item-center rounded ">
-                <div>
-                  <h3 className="fs-2 pt-3">450</h3>
-                  <p className="fs-2">Visitor</p>
-                </div>
-                <i class="bi bi-people p-3 fs-1"></i>
-              </div>
-            </div> */}
-
             <div className="col-md p-3">
+        
               <div className="p-3 bg-white shadow-sm  d-flex justify-content-around align-item-center rounded ">
                 <div>
                   <h3 className="fs-2 mt-3">{Object.keys(user).length}</h3>
@@ -85,13 +83,23 @@ const Admin = () => {
                       <td>{user.Package}</td>
                       <td>{Number(user.Kids )+ Number(user.Adults) + Number(user.Seniors)}</td>
                       <td>
+                      <button
+                          type="button"
+                          className="btn btn-success dlt-btn mx-2"
+                          // onClick={() => removeId(user.id)}
+                        >
+                          {/* <ion-icon name="close"></ion-icon> */}
+                          <ion-icon name="pencil"></ion-icon>
+                        </button>
                         <button
                           type="button"
                           className="btn btn-danger dlt-btn"
                           onClick={() => removeId(user.id)}
                         >
                           <ion-icon name="close"></ion-icon>
+                          {/* <ion-icon name="pencil"></ion-icon> */}
                         </button>
+                      
                       </td>
                     </tr>
                   </>

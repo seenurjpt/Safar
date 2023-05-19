@@ -13,10 +13,8 @@ import Login from "./pages/login/Login";
 import Admin from "./pages/admin/admin";
 import Toggle from "./components/toggle/Toggle";
 import BookPackage from "./pages/booking/bookdetails";
-import User from "./pages/Userprofile/userprofile";
-import Star from "./pages/star/Star";
-import Feedback from "./pages/admin/feedback";
-
+import Feedback from "./pages/admin/Feedback";
+import Payment from "./components/common/paymentgateway/Payment";
 
 
 function App() {
@@ -37,11 +35,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="admin" element={<Admin />} />
         <Route path="bookpackage" element={<BookPackage />} />
-        <Route path="user" element={<User />} />
-        <Route path = "rating" element={<Star/>} />
-        <Route path = "feedbackadmin" element={<Feedback/>} />
-
-
+        <Route path="feedback" element={<Feedback />} />
+        <Route path="payment" element={<Payment />} />
       </Routes>
 
       <Footer />

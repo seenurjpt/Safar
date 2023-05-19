@@ -126,7 +126,7 @@
 
 
 /* necessary to give position: relative to parent. */
-input[type="text"] {
+.ola > input[type="text"] {
   font: 15px/24px;
   color: var(--primary-shades);
   width: 100%;

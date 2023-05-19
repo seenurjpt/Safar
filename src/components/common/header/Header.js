@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import userPro from "../../../assets/clipart546487.png"
 import "../header/Header1.css";
+// import userPro from "../../../assets/clipart546487.png"
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -75,6 +76,11 @@ function Header() {
                   Contact Us
                 </NavLink>
               </li>
+              {/* <li className="nav-item">
+                <NavLink to="/login" activeClassName="active">
+                <img class="rounded-circle" width="30px" src={userPro} />
+                </NavLink>
+              </li> */}
               <li className="nav-item">
                 <NavLink to="/login" activeClassName="active">
                 <img class="rounded-circle" width="30px" src={userPro} />

@@ -2,7 +2,6 @@ import { React, useEffect, useState } from "react";
 import "./admin.css";
 import axios from "axios";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
 const Feedback = () => {
   const [data, setData] = useState([]);
   const getApi = () => {

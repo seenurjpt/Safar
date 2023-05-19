@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../packages/Packages.css";
+// import "../packages/search.css";
 import bannerpack from "../../assets/packages_images/packages banner.jpg";
 
 const Packages = () => {
@@ -45,6 +46,11 @@ const Packages = () => {
         </div>
       </div>
 
+      {/* <div id="wrap" style={{marginTop:"10rem", marginBottom:"-8rem", marginLeft:"35rem"}}>
+  <form  autocomplete="on">
+  <input id="search" name="search" type="text" placeholder="What're we looking for ?"/><input id="search_submit" value="Rechercher" type="submit"/>
+  </form>
+</div> */}
 
       <div className="wholee">
         
