@@ -1,15 +1,26 @@
-import React from "react";
+import {React ,useState} from "react";
+import axios from "axios";
 import "./Contact.css";
 import bannerco from "../../assets/contact-banner.jpg";
 
 const Contact = () => {
+  const [val, setVal] = useState()
+  const handleChange = (e) => {
+    setVal({ ...val, [e.target.name]: e.target.value });
+    console.log("test", val)
+  };
+
+  const handleSubmit = () => {
+    axios.post("http://localhost:3004/contact", val).then((result) => {
+    });
+  };
   return (
     <>
       <div class="contact-banner">
         <img src={bannerco} />
       </div>
 
-      <div class="abc">
+      <div class="abcd">
         <p class="contact-fade">Contact</p>
         <p class="contact-banner-text">Connect With Us</p>
       </div>
@@ -17,7 +28,7 @@ const Contact = () => {
       <div class="row ola">
         <div class="col-sm-1 col-1">
           <div class="card1 d-flexl- justify-content-center">
-            <h1>Contact Info</h1>
+            <p><h1>Contact Info</h1></p>
 
             <div class="info11">
               <div>
@@ -48,9 +59,7 @@ const Contact = () => {
               <a href="https://www.instagram.com">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
-              <a href="https://in.pinterest.com/">
-                <i class="bi bi-pinterest kk"></i>
-              </a>
+
             </div>
           </div>
         </div>
@@ -62,54 +71,62 @@ const Contact = () => {
             </div>
 
             <div class="form55">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div class="d-flex gap-5 w-100 py-sm-3">
                   <div>
-                    <label for="fname">First name:</label>
+                    <label for="fname"><p>First name:</p></label>
                     <br />
-                    <input type="text" id="fname" name="fname" class="effect" />
+                    <input type="text" id="fname" name="fname" class="effect" onChange={(e) => handleChange(e)} required/>
                     <br />
                   </div>
                   <div>
-                    <label for="lname">Last name:</label> <br />
-                    <input type="text" id="lname" name="lname" class="effect" />
+                    <label for="lname"><p>Last name:</p></label> <br />
+                    <input type="text" id="lname" name="lname" class="effect" onChange={(e) => handleChange(e)} required/>
                     <br />
                   </div>
                 </div>
 
                 <div class="d-flex gap-5 w-100 py-sm-3 py-2 ">
                   <div>
-                    <label for="fname">Email id:</label>
+                    <label for="fname"><p>Email id:</p></label>
                     <br />
                     <input
                       type="email"
                       id="ename"
                       name="ename"
                       class="effect"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      onChange={(e) => handleChange(e)}
+                      required
                     />
                     <br />
                   </div>
                   <div>
-                    <label for="fname">Phone no.:</label>
+                    <label for="fname"><p>Phone no.:</p></label>
                     <br />
                     <input
-                      type="number"
+                      type="tel"
                       id="pname"
                       name="pname"
                       class="effect"
+                      pattern="[0-9]{10}"
+                      onChange={(e) => handleChange(e)}
+                      required
                     />
                     <br />
                   </div>
                 </div>
                 <div>
-                  <label for="lname">Write something here...</label>
+                  <label for="lname"><p>Write something here...</p></label>
                   <br />
                   <textarea
-                    name=""
+                    name="something"
                     id=""
                     cols="55"
                     rows="2"
                     class="effect"
+                    onChange={(e) => handleChange(e)}
+                    required
                   ></textarea>
                 </div>
                 <br />

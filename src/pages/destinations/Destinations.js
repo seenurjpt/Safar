@@ -33,14 +33,13 @@ import "../destinations/Destinations.css"
 const Destinations = () => {
   return (
     <>
-      {/* <div> */}
         <section className="banner">
           <div className="about-banner">
             <img src={desbanner} alt="" />
           </div>
-          <div className="abc">
-            <p className="contact-fade">Destinations</p>
-            <p className="about-banner-text">Explore the beauty</p>
+          <div className="abc12">
+            <p className="dest-fade">Destinations</p>
+            <p className="desti-banner-text">Explore the beauty</p>
           </div>
         </section>
         <section className="whole">

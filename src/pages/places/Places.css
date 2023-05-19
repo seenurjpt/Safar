@@ -1,16 +1,4 @@
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background:#e6e6eb;
-}
 .banner img{
     height: 40vh;
     min-width: 100%;
@@ -24,32 +12,33 @@ body {
     justify-content: center;
     align-items: center;
 }
-.text{
+.gallery-fade-text{
     position: absolute;
-   font-size: 5rem;
+   font-size: 4rem;
    font-weight: 400;
    color: whitesmoke;
    text-transform: capitalize;
    z-index: 2;
 }
 
-.txxt{
+.gallery-fade{
     position: relative;
-    font-size: 18rem;
+    font-size: 15rem;
     font-weight: 1000;
+    letter-spacing: 20px;
     opacity: 0.2;
-    color: aquamarine;
+    color: var(--para-color);
     text-transform: uppercase;
 }
 
 .wrapper {
     max-width: 75rem;
-    padding: 0rem;
+    padding-bottom: 20px;
     margin: 0 auto;
 
 }
 /* @media (max-width: 1560px) {
-    .text{
+    .gallery-fade-text{
         position: absolute;
        font-size: 5rem;
        font-weight: 400;
@@ -76,7 +65,7 @@ body {
   } */
 
   @media (max-width: 800px) {
-    .text{
+    .gallery-fade-text{
         position: absolute;
        font-size: 1.2rem;
        font-weight: 400;
@@ -84,7 +73,7 @@ body {
        text-transform: capitalize;
        z-index: 2;
     }
-    .txxt{
+    .gallery-fade{
         position: relative;
         font-size: 4.5rem;
         font-weight: 1000;
@@ -517,15 +506,13 @@ justify-content: center;
     bottom: 0;
     left: 0;
     right: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background: rgba(0, 0, 0, 0.4);
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--places-color);
     font-weight: 700;
     text-transform: uppercase;
 

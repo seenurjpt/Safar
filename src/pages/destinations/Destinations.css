@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Mono:ital,wght@1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
+.whole{
+    background-color: var(--bg-color);
+}
 .imagica{
     display: flex;
     align-items: center;
@@ -20,14 +22,20 @@
     font-family: "Lobster", cursive;
     letter-spacing: 3px;
 }
-.contact-fade{
-    font-size: 8em;
-    margin-top: 50px;
-    color: rgba(245, 243, 243, 0.6);
+.dest-fade{
+    position: relative;
+    opacity: 0.1;
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+    letter-spacing: 15px;
+    padding-top: 50px;
+    color: var(--white);
 }
 .container{
     display: flex;
     justify-content: space-around;
+    padding-top: 30px;
 }
 .ok {
     display: flex;
@@ -39,19 +47,29 @@
     border-radius: 30px;
     transform: scale(1.05);
     transition: 0.2s;
-    box-shadow: 20px 20px 15px;
+    box-shadow: 8px 10px 30px var(--desti-cardhover);
 }
 .about-banner img{
-    height: auto;
+    height: 40vh;
     width: auto;
     filter: brightness(50%);
     position: absolute;
 }
-.abc{
-    align-items: left;
+.abc12{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.about-banner-text{
-    margin-top: 30px;
+.desti-banner-text{
+    position: absolute;
+    font-size: 4.5rem;
+    font-weight: 600;
+    padding-top: 50px;
+    color: var(--white);
+    text-transform: capitalize;
+    letter-spacing: 10px;
+    z-index: 2;
 }
 @media (max-width:1680px) {
     .imagica{
@@ -79,16 +97,16 @@
     }
     .whole{
         display: block;
-        margin-top: 6rem;
-        margin-bottom: 3rem;
+        /* margin-top: 6rem; */
+        padding-bottom: 3rem;
     }
-    .contact-fade{
+    .dest-fade{
         font-size: 13em;
         letter-spacing: normal;
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -125,16 +143,16 @@
     }
     .whole{
         display: block;
-        margin-top: 6rem;
-        margin-bottom: 3rem;
+        /* margin-top: 6rem; */
+        padding-bottom: 3rem;
     }
-    .contact-fade{
+    .dest-fade{
         font-size: 11em;
         letter-spacing: normal;
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -171,15 +189,15 @@
     }
     .whole{
         display: block;
-        margin-top: 6rem;
+        /* margin-top: 6rem; */
     }
-    .contact-fade{
+    .dest-fade{
         font-size: 8em;
         letter-spacing: normal;
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
     }
     .img img{
@@ -216,16 +234,17 @@
     }
     .whole{
         display: block;
-        margin-top: 6rem;
+        /* margin-top: 6rem; */
     }
-    .contact-fade{
+    .dest-fade{
         font-size: 5.2em;
         letter-spacing: normal;
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc1{
         align-items:center;
+
     }
     .img img{
         width: 15vh;
@@ -262,19 +281,28 @@
     }
     .whole{
         display: block;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
     }
-    .contact-fade{
+    .dest-fade{
         font-size: 3.7em;
         letter-spacing: normal;
+        padding-bottom: 50px;
         width: 100%;
         text-align: center;
     }
-    .abc{
+    .abc12{
         align-items:center;
+        height: 29vh;
     }
-    .about-banner-text{
-        font-size: 2em;
+    .desti-banner-text{
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 600;
+        padding-top: 0;
+        color: var(--white);
+        text-transform: capitalize;
+        letter-spacing: 10px;
+        z-index: 2;
     }
     .img img{
         width: 30vh;
