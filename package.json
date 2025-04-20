@@ -24,6 +24,7 @@
     "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.9.0",
     "react-scripts": "^5.0.1",
+    "react-select": "^5.10.1",
     "react-sticky": "^6.0.3",
     "react-stripe-checkout": "^2.6.3",
     "typewriter-effect": "^2.19.0",
